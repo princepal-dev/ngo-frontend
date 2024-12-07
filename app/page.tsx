@@ -1,100 +1,272 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { GiWaterSplash } from "react-icons/gi";
+import { Reviews } from "@/components/Reviews";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-emerald-50">
+      <header className="bg-emerald-600 text-white"></header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main>
+        <section className="bg-white py-12 md:py-20">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="md:w-1/2 mb-8 md:mb-0">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-blue-950">
+                  Together, We Can Make a Difference
+                </h1>
+                <p className="text-md md:text-xl mb-6 text-gray-500">
+                  Join us in our mission to create a sustainable future for all
+                  children
+                </p>
+                <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
+                  <Button className="bg-emerald-600 text-white hover:bg-emerald-700 w-full sm:w-auto">
+                    Get Involved
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 w-full sm:w-auto"
+                  >
+                    Donate Now
+                  </Button>
+                </div>
+              </div>
+              <div className="md:w-1/2 mt-8 md:mt-0">
+                <Image
+                  src="/hero.jpg"
+                  alt="Poor children in need of help"
+                  width={600}
+                  height={400}
+                  className="rounded-lg shadow-lg w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-emerald-100">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-950 mb-6 md:mb-8">
+              Our Mission
+            </h2>
+            <p className="text-base md:text-lg text-center text-gray-600 max-w-3xl mx-auto">
+              We strive to protect and preserve our planet&apos;s natural
+              resources while improving the lives of underprivileged children.
+              Through education, community engagement, and sustainable
+              practices, we aim to build a greener, cleaner world for future
+              generations.
+            </p>
+            <div className=" my-16 flex gap-16 justify-center">
+              <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center hover:bg-emerald-500 bg-slate-50 hover:text-white text-zinc-700  ">
+                <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
+                <p className="text-3xl mt-8 font-semibold">Clean Water</p>
+                <p className="mt-2 text-center">
+                  The sea freight service has grown conside rably in recent
+                  years. We spend timetting to know your processes to.
+                </p>
+              </div>
+              <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center bg-emerald-500 text-white  ">
+                <GiWaterSplash className="h-20 w-20 bg-white text-emerald-400 px-2 py-3 rounded-full" />
+                <p className="text-3xl mt-8 font-semibold">Clean Water</p>
+                <p className="mt-2 text-center">
+                  The sea freight service has grown conside rably in recent
+                  years. We spend timetting to know your processes to.
+                </p>
+              </div>
+              <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center hover:bg-emerald-500 bg-slate-50 hover:text-white text-zinc-700  ">
+                <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
+                <p className="text-3xl mt-8 font-semibold">Clean Water</p>
+                <p className="mt-2 text-center">
+                  The sea freight service has grown conside rably in recent
+                  years. We spend timetting to know your processes to.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-950 mb-8 md:mb-12">
+              Our Projects
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {[
+                {
+                  title: "Child Education",
+                  image: "/placeholder.svg?height=200&width=300",
+                },
+                {
+                  title: "Clean Water Initiative",
+                  image: "/placeholder.svg?height=200&width=300",
+                },
+                {
+                  title: "Sustainable Agriculture",
+                  image: "/placeholder.svg?height=200&width=300",
+                },
+              ].map((project, index) => (
+                <div
+                  key={index}
+                  className="bg-emerald-50 rounded-lg shadow-md overflow-hidden"
+                >
+                  add Images
+                  <div className="p-4">
+                    <h3 className="font-bold text-xl mb-2 text-emerald-700">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm md:text-base">
+                      Our {project.title.toLowerCase()} project aims to improve
+                      the lives of children and their communities through
+                      sustainable development and education.
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16 bg-white ">
+          <div className="container mx-auto px-4 text-center">
+            <p className="text-emerald-400 font-semibold mb-10">
+              What We Are Doing
+            </p>
+            <h2 className="text-2xl md:text-3xl text-blue-950 font-bold mb-4 md:mb-6">
+              Our Expert Volunteer Always ready
+            </h2>
+            <div className="flex justify-center gap-8">
+              <div className="w-72 flex flex-col justify-between   rounded-lg items-center  bg-slate-50  text-zinc-700  ">
+                <div>
+                  <Image
+                    className="w-64 h-70 bg-cover "
+                    src="/team1.jpg"
+                    alt="team"
+                    height={300}
+                    width={300}
+                  />
+                </div>
+                <div>
+                  <p className="text-2xl mt-4 font-semibold">Prince Pal</p>
+                  <p className="mt-1 text-center">Volunteer Leader</p>
+                </div>
+              </div>
+              <div className="w-72 flex flex-col justify-between   rounded-lg items-center  bg-slate-50  text-zinc-700  ">
+                <div>
+                  <Image
+                    className="w-64 h-70 bg-cover "
+                    src="/team1.jpg"
+                    alt="team"
+                    height={300}
+                    width={300}
+                  />
+                </div>
+                <div>
+                  <p className="text-2xl mt-4 font-semibold">Prince Pal</p>
+                  <p className="mt-1 text-center">Volunteer Leader</p>
+                </div>
+              </div>
+              <div className="w-72 flex flex-col justify-between   rounded-lg items-center  bg-slate-50  text-zinc-700  ">
+                <div>
+                  <Image
+                    className="w-64 h-70 bg-cover "
+                    src="/team1.jpg"
+                    alt="team"
+                    height={300}
+                    width={300}
+                  />
+                </div>
+                <div>
+                  <p className="text-2xl mt-4 font-semibold">Prince Pal</p>
+                  <p className="mt-1 text-center">Volunteer Leader</p>
+                </div>
+              </div>
+              <div className="w-72 flex flex-col justify-between   rounded-lg items-center  bg-slate-50  text-zinc-700  ">
+                <div>
+                  <Image
+                    className="w-64 h-70 bg-cover "
+                    src="/team1.jpg"
+                    alt="team"
+                    height={300}
+                    width={300}
+                  />
+                </div>
+                <div>
+                  <p className="text-2xl mt-4 font-semibold">Prince Pal</p>
+                  <p className="mt-1 text-center">Volunteer Leader</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-4">
+          <p className="text-emerald-500 text-2xl font-semibold text-center">What people says</p>
+          <Reviews />
+        </section>
+
+        <section className="py-12 md:py-16 bg-emerald-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+              Support Our Cause
+            </h2>
+            <p className="text-lg md:text-xl mb-6 md:mb-8">
+              Your donation can help us make a lasting impact on children&apos;s
+              lives and the environment
+            </p>
+            <Button className="bg-white text-emerald-600 hover:bg-emerald-100">
+              Donate Now
+            </Button>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="bg-emerald-800 text-white py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-between">
+            <div className="w-full md:w-1/3 mb-6 md:mb-0">
+              <h3 className="text-xl font-bold mb-2">EcoAction NGO</h3>
+              <p className="text-sm md:text-base">
+                Making the world a better place for children, one project at a
+                time.
+              </p>
+            </div>
+            <div className="w-full md:w-1/3 mb-6 md:mb-0">
+              <h3 className="text-xl font-bold mb-2">Contact Us</h3>
+              <p className="text-sm md:text-base">Email: info@ecoaction.org</p>
+              <p className="text-sm md:text-base">Phone: (123) 456-7890</p>
+            </div>
+            <div className="w-full md:w-1/3">
+              <h3 className="text-xl font-bold mb-2">Follow Us</h3>
+              <div className="flex space-x-4">
+                <Link
+                  href="#"
+                  className="hover:text-emerald-300 text-sm md:text-base"
+                >
+                  Facebook
+                </Link>
+                <Link
+                  href="#"
+                  className="hover:text-emerald-300 text-sm md:text-base"
+                >
+                  Twitter
+                </Link>
+                <Link
+                  href="#"
+                  className="hover:text-emerald-300 text-sm md:text-base"
+                >
+                  Instagram
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <p className="text-sm">
+              &copy; 2023 EcoAction NGO. All rights reserved.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
