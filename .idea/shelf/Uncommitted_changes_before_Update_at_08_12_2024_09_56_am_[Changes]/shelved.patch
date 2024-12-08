@@ -1,0 +1,159 @@
+Index: prisma/schema.prisma
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/prisma/schema.prisma b/prisma/schema.prisma
+new file mode 100644
+--- /dev/null	(date 1733563448223)
++++ b/prisma/schema.prisma	(date 1733563448223)
+@@ -0,0 +1,89 @@
++generator client {
++  provider = "prisma-client-js"
++}
++
++datasource db {
++  provider = "postgresql"
++  url      = env("DATABASE_URL")
++}
++
++enum Role {
++  USER
++  ADMIN
++}
++
++model User {
++  id            String    @id @default(cuid())
++  name          String?
++  email         String    @unique
++  emailVerified DateTime?
++  image         String?
++  role          Role      @default(USER)
++  accounts      Account[]
++  sessions      Session[]
++
++  createdAt DateTime @default(now())
++  updatedAt DateTime @updatedAt
++  Blog      Blog[]
++}
++
++model Blog {
++  id        String   @id @default(cuid())
++  title     String
++  content   String
++  published Boolean  @default(false)
++  authorId  String
++  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
++  images    Image[]
++  createdAt DateTime @default(now())
++  updatedAt DateTime @updatedAt
++
++  @@index([title])
++}
++
++model Image {
++  id        String   @id @default(cuid())
++  url       String
++  blogId    String
++  blog      Blog     @relation(fields: [blogId], references: [id], onDelete: Cascade)
++  createdAt DateTime @default(now())
++}
++
++model Account {
++  userId            String
++  type              String
++  provider          String
++  providerAccountId String
++  refresh_token     String?
++  access_token      String?
++  expires_at        Int?
++  token_type        String?
++  scope             String?
++  id_token          String?
++  session_state     String?
++
++  createdAt DateTime @default(now())
++  updatedAt DateTime @updatedAt
++
++  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
++
++  @@id([provider, providerAccountId])
++}
++
++model Session {
++  sessionToken String   @unique
++  userId       String
++  expires      DateTime
++  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
++
++  createdAt DateTime @default(now())
++  updatedAt DateTime @updatedAt
++}
++
++model VerificationToken {
++  identifier String
++  token      String
++  expires    DateTime
++
++  @@id([identifier, token])
++}
+Index: auth.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import NextAuth from \"next-auth\";\r\nimport GitHub from \"next-auth/providers/github\";\r\nimport Google from \"next-auth/providers/google\";\r\n\r\nexport const { auth, handlers, signIn, signOut } = NextAuth({\r\n    providers: [GitHub, Google],\r\n});\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/auth.ts b/auth.ts
+--- a/auth.ts	(revision 80573aedec0fcbe8ac63617f0883f6f88525df14)
++++ b/auth.ts	(date 1733563967630)
+@@ -1,7 +1,30 @@
+ import NextAuth from "next-auth";
+ import GitHub from "next-auth/providers/github";
+ import Google from "next-auth/providers/google";
++import { PrismaClient } from "@prisma/client";
++
++const prisma = new PrismaClient();
+ 
+ export const { auth, handlers, signIn, signOut } = NextAuth({
+     providers: [GitHub, Google],
++    session: {
++        strategy: "jwt",
++        maxAge: 30 * 24 * 60 * 60,
++        updateAge: 24 * 60 * 60,
++    },
++    callbacks: {
++        authorized({ auth, request }) {
++            return !!auth?.user;
++        },
++        async session({ session }) {
++            const currentUser = await prisma.user.findUnique({
++                where: { email: session.user.email as string },
++            });
++            session.user.id = currentUser.id!;
++            session.user.role = currentUser?.role!;
++            session.user.name = currentUser?.name!;
++
++            return session;
++        },
++    }
+ });
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"name\": \"ngo-frontend\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"scripts\": {\r\n    \"dev\": \"next dev\",\r\n    \"build\": \"next build\",\r\n    \"start\": \"next start\",\r\n    \"lint\": \"next lint\"\r\n  },\r\n  \"dependencies\": {\r\n    \"next\": \"15.0.4\",\r\n    \"next-auth\": \"^5.0.0-beta.25\",\r\n    \"prisma\": \"^6.0.1\",\r\n    \"react\": \"^19.0.0\",\r\n    \"react-dom\": \"^19.0.0\"\r\n  },\r\n  \"devDependencies\": {\r\n    \"@types/node\": \"^20\",\r\n    \"@types/react\": \"^19\",\r\n    \"@types/react-dom\": \"^19\",\r\n    \"eslint\": \"^8\",\r\n    \"eslint-config-next\": \"15.0.4\",\r\n    \"postcss\": \"^8\",\r\n    \"tailwindcss\": \"^3.4.1\",\r\n    \"typescript\": \"^5\"\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/package.json b/package.json
+--- a/package.json	(revision 80573aedec0fcbe8ac63617f0883f6f88525df14)
++++ b/package.json	(date 1733563576562)
+@@ -9,6 +9,8 @@
+     "lint": "next lint"
+   },
+   "dependencies": {
++    "@auth/prisma-adapter": "^2.7.4",
++    "@prisma/client": "^6.0.1",
+     "next": "15.0.4",
+     "next-auth": "^5.0.0-beta.25",
+     "prisma": "^6.0.1",

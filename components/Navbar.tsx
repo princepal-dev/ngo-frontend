@@ -23,7 +23,7 @@ export default async function navbar() {
       <div className="max-w-screen-2xl w-full">
         <div className="flex justify-between">
           <Link href="/">
-            <Image src={logo} height={90} width={90} alt="logo" />
+            <Image src={logo} height={50} width={50} alt="logo" />
           </Link>
           <ul className="flex gap-12 text-zinc-800 font-medium items-center transition-all duration-500 ">
             <li>
