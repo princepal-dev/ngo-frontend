@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
-import "./globals.css";
+import "@/app/globals.css";
 import AuthProvider from "@/components/auth-provider";
 
 const josefin = Josefin_Sans({

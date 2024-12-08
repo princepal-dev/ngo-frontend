@@ -6,7 +6,11 @@ import { Home, Settings } from "lucide-react";
 import { FaBloggerB } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { SiGoogleforms } from "react-icons/si";
-import { IoIosContacts } from "react-icons/io";
+import { IoIosContacts, IoMdExit } from "react-icons/io";
+import Image from "next/image";
+import logo from "@/public/HungerToHope.png";
+import React from "react";
+import SignOutButton from "@/components/signOutButton";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -16,8 +20,14 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="w-64 bg-white shadow-md">
-      <nav className="p-4">
+    <aside className="w-64 flex flex-col justify-between bg-white shadow-md">
+      <nav className="flex flex-col space-y-10 p-4">
+        <div className="flex items-center justify-center">
+          <Link href="/">
+            <Image src={logo} height={100} width={100} alt="logo" />
+          </Link>
+        </div>
+
         <ul className="space-y-2">
           <li>
             <Link
@@ -75,6 +85,11 @@ const Sidebar = () => {
           </li>
         </ul>
       </nav>
+
+      <div className="rounded-md py-2 flex items-center justify-center gap-2 mb-8">
+        <IoMdExit className="text-2xl" />
+        <SignOutButton />
+      </div>
     </aside>
   );
 };
