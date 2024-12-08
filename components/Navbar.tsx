@@ -23,7 +23,7 @@ export default function navbar() {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-emerald-400 " href="/works">
+              <Link className="hover:text-emerald-400 " href="/our-works">
                 Our Works
               </Link>
             </li>
@@ -33,7 +33,7 @@ export default function navbar() {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-emerald-400 " href="/contact">
+              <Link className="hover:text-emerald-400 " href="/contact-us">
                 Contact Us
               </Link>
             </li>
