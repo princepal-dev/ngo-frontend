@@ -1,23 +1,28 @@
 import type { Metadata } from "next";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
+const josefin = Josefin_Sans({
+    subsets: ["latin"],
+    display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "NGO | One stop solution..",
-  description: "Ngo website for saving needy ones",
+    title: "HungerToHope",
+    description: "",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body >
-        <div>
-          <Navbar />
-        </div>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
