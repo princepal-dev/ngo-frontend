@@ -226,7 +226,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <h3 className="text-xl font-bold mb-2">EcoAction NGO</h3>
+              <h3 className="text-xl font-bold mb-2">HungerToHope</h3>
               <p className="text-sm md:text-base">
                 Making the world a better place for children, one project at a
                 time.
@@ -234,7 +234,7 @@ export default function Home() {
             </div>
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <h3 className="text-xl font-bold mb-2">Contact Us</h3>
-              <p className="text-sm md:text-base">Email: info@ecoaction.org</p>
+              <p className="text-sm md:text-base">Email: HungerToHope.org</p>
               <p className="text-sm md:text-base">Phone: (123) 456-7890</p>
             </div>
             <div className="w-full md:w-1/3">
@@ -263,7 +263,7 @@ export default function Home() {
           </div>
           <div className="mt-8 text-center">
             <p className="text-sm">
-              &copy; 2023 EcoAction NGO. All rights reserved.
+              &copy; 2024 HungerToHope. All rights reserved.
             </p>
           </div>
         </div>
