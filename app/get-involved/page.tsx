@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -12,7 +11,6 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/hooks/use-toast"
-import { Menu } from 'lucide-react'
 import { submitVolunteerForm } from './action'
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024 // 5MB
@@ -352,4 +350,3 @@ export default function GetInvolved() {
     </div>
   )
 }
-
