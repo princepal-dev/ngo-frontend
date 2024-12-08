@@ -23,17 +23,17 @@ export default function navbar() {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-emerald-400 " href="/">
+              <Link className="hover:text-emerald-400 " href="/our-works">
                 Our Works
               </Link>
             </li>
             <li>
-              <Link className="hover:text-emerald-400 " href="/">
+              <Link className="hover:text-emerald-400 " href="/get-involved">
                 Get Involved
               </Link>
             </li>
             <li>
-              <Link className="hover:text-emerald-400 " href="/">
+              <Link className="hover:text-emerald-400 " href="/contact-us">
                 Contact Us
               </Link>
             </li>
