@@ -1,49 +1,60 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { signIn, useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { FcGoogle } from 'react-icons/fc'
+import React, { useState } from "react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { FcGoogle } from "react-icons/fc";
 
 export default function JoinUs() {
-  const router = useRouter()
-  const { status } = useSession()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
+  const router = useRouter();
+  const { status } = useSession();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    if (status === 'authenticated') {
-      router.push('/dashboard')
+    if (status === "authenticated") {
+      router.push("/");
     }
-  }, [status, router])
+  }, [status, router]);
 
   const handleGoogleSignIn = () => {
-    signIn('google', { callbackUrl: '/dashboard' })
-  }
+    signIn("google");
+  };
 
   const handleEmailSignIn = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setError('')
-    const result = await signIn('credentials', {
+    e.preventDefault();
+    setError("");
+    const result = await signIn("credentials", {
       redirect: false,
       email,
       password,
-    })
+    });
     if (result?.error) {
-      setError('Invalid email or password')
+      setError("Invalid email or password");
     } else {
-      router.push('/dashboard')
+      router.push("/");
     }
-  }
+  };
 
-  if (status === 'loading') {
-    return <div className="flex justify-center items-center h-screen">Loading...</div>
+  if (status === "loading") {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        Loading...
+      </div>
+    );
   }
 
   return (
@@ -57,38 +68,42 @@ export default function JoinUs() {
           <form onSubmit={handleEmailSignIn} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input 
-                id="email" 
-                type="email" 
-                placeholder="m@example.com" 
+              <Input
+                id="email"
+                type="email"
+                placeholder="m@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required 
+                required
               />
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
-              <Input 
-                id="password" 
+              <Input
+                id="password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                required 
+                required
               />
             </div>
             {error && <p className="text-sm text-red-500">{error}</p>}
-            <Button type="submit" className="w-full">Sign in with Email</Button>
+            <Button type="submit" className="w-full">
+              Sign in with Email
+            </Button>
           </form>
           <div className="relative my-4">
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-white px-2 text-gray-500">Or continue with</span>
+              <span className="bg-white px-2 text-gray-500">
+                Or continue with
+              </span>
             </div>
           </div>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             onClick={handleGoogleSignIn}
             className="w-full flex items-center justify-center"
           >
@@ -103,6 +118,5 @@ export default function JoinUs() {
         </CardFooter>
       </Card>
     </div>
-  )
+  );
 }
-

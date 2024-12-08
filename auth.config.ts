@@ -3,12 +3,13 @@ import { LoginSchema } from "@/schemas";
 import { PrismaClient } from "@prisma/client";
 import Google from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
-
+import {PrismaAdapter} from "@auth/prisma-adapter";
 import { NextAuthConfig } from "next-auth";
 
 const prisma = new PrismaClient();
 
 export default {
+  // adapter: PrismaAdapter(prisma),
   providers: [
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,

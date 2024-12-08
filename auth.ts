@@ -13,6 +13,9 @@ const ADMIN_EMAILS = [
 ];
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
+  pages: {
+    signIn: "join-us",
+  },
   callbacks: {
     async signIn({ user, account }) {
       if (account?.provider !== "credentials") return true;
@@ -33,8 +36,12 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
       return true;
     },
     async session({ session, token }) {
+      const currentUser = await prisma.user.findUnique({
+        where: { email: session.user.email as string },
+      });
       if (session.user) {
         session.user.id = token.sub as string;
+        session.user.name = token.name as string;
         session.user.role = token.role as Role;
         session.user.isOAuth = token.isOAuth as boolean;
       }
