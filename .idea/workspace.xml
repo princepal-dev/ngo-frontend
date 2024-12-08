@@ -4,25 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c08da58-6e6a-43fc-942f-941014ec6412" name="Changes" comment="Added User Auth">
+    <list default="true" id="2c08da58-6e6a-43fc-942f-941014ec6412" name="Changes" comment="Add Diff layout's">
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/add/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/columns.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/contact-forms/columns.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/contact-forms/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/users/columns.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/users/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/volunteer-forms/columns.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/volunteer-forms/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Overview.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/RecentUsers.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/avatar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/chart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/data-table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/about-us/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/contact-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/contact-us/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/blogs/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/contact-forms/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/settings/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/users/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/volunteer-forms/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/get-involved/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/get-involved/action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/get-involved/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/get-involved/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/join-us/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/join-us/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/join-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/join-us/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/our-works/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/our-works/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,11 +91,11 @@
       <recent name="D:\Client Works\ngo-frontend\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Client Works\ngo-frontend\components\ui" />
       <recent name="D:\Client Works\ngo-frontend\app\(dashboard)" />
       <recent name="D:\Client Works\ngo-frontend\app\(home)" />
       <recent name="D:\Client Works\ngo-frontend\app" />
       <recent name="D:\Client Works\ngo-frontend\app\(dashboard)\dashboard" />
-      <recent name="D:\Client Works\ngo-frontend\app\(Home)" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -110,7 +116,7 @@
       <workItem from="1733631959620" duration="3218000" />
       <workItem from="1733635227038" duration="13382000" />
       <workItem from="1733649632575" duration="752000" />
-      <workItem from="1733650432612" duration="348000" />
+      <workItem from="1733650432612" duration="6030000" />
     </task>
     <task id="LOCAL-00001" summary="Added Many Pages">
       <option name="closed" value="true" />
@@ -136,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733643286865</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Diff layout's">
+      <option name="closed" value="true" />
+      <created>1733651148851</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733651148851</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +171,7 @@
     <MESSAGE value="Added Many Pages" />
     <MESSAGE value="Added Auth" />
     <MESSAGE value="Added User Auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added User Auth" />
+    <MESSAGE value="Add Diff layout's" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Diff layout's" />
   </component>
 </project>
