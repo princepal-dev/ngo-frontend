@@ -1,30 +1,32 @@
-import type { Metadata } from "next";
+import React from "react";
 import { Josefin_Sans } from "next/font/google";
-import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+import "./globals.css";
 
 const josefin = Josefin_Sans({
-    subsets: ["latin"],
-    display: "swap",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-    title: "HungerToHope",
-    description: "",
+  title: "HungerToHope",
+  description: "",
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        <Navbar/>
+      <body className={`${josefin.className} antialiased`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

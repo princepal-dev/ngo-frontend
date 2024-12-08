@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { GiWaterSplash } from "react-icons/gi";
 import { Reviews } from "@/components/Reviews";
@@ -63,24 +62,24 @@ export default function Home() {
                 <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
                 <p className="text-3xl mt-8 font-semibold">Clean Water</p>
                 <p className="mt-2 text-center">
-                  The sea freight service has grown conside rably in recent
-                  years. We spend timetting to know your processes to.
+                  The sea freight service has grown consider ably in recent
+                  years. We spend testing to know your processes to.
                 </p>
               </div>
               <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center bg-emerald-500 text-white  ">
                 <GiWaterSplash className="h-20 w-20 bg-white text-emerald-400 px-2 py-3 rounded-full" />
                 <p className="text-3xl mt-8 font-semibold">Clean Water</p>
                 <p className="mt-2 text-center">
-                  The sea freight service has grown conside rably in recent
-                  years. We spend timetting to know your processes to.
+                  The sea freight service has grown consider ably in recent
+                  years. We spend testing to know your processes to.
                 </p>
               </div>
               <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center hover:bg-emerald-500 bg-slate-50 hover:text-white text-zinc-700  ">
                 <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
                 <p className="text-3xl mt-8 font-semibold">Clean Water</p>
                 <p className="mt-2 text-center">
-                  The sea freight service has grown conside rably in recent
-                  years. We spend timetting to know your processes to.
+                  The sea freight service has grown consider ably in recent
+                  years. We spend testing to know your processes to.
                 </p>
               </div>
             </div>
@@ -202,7 +201,9 @@ export default function Home() {
         </section>
 
         <section className="py-4">
-          <p className="text-emerald-500 text-2xl font-semibold text-center">What people says</p>
+          <p className="text-emerald-500 text-2xl font-semibold text-center">
+            What people says
+          </p>
           <Reviews />
         </section>
 
@@ -221,53 +222,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="bg-emerald-800 text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between">
-            <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <h3 className="text-xl font-bold mb-2">HungerToHope</h3>
-              <p className="text-sm md:text-base">
-                Making the world a better place for children, one project at a
-                time.
-              </p>
-            </div>
-            <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <h3 className="text-xl font-bold mb-2">Contact Us</h3>
-              <p className="text-sm md:text-base">Email: HungerToHope.org</p>
-              <p className="text-sm md:text-base">Phone: (123) 456-7890</p>
-            </div>
-            <div className="w-full md:w-1/3">
-              <h3 className="text-xl font-bold mb-2">Follow Us</h3>
-              <div className="flex space-x-4">
-                <Link
-                  href="#"
-                  className="hover:text-emerald-300 text-sm md:text-base"
-                >
-                  Facebook
-                </Link>
-                <Link
-                  href="#"
-                  className="hover:text-emerald-300 text-sm md:text-base"
-                >
-                  Twitter
-                </Link>
-                <Link
-                  href="#"
-                  className="hover:text-emerald-300 text-sm md:text-base"
-                >
-                  Instagram
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <p className="text-sm">
-              &copy; 2024 HungerToHope. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
