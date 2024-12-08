@@ -69,10 +69,10 @@ export default function AboutUs() {
                   Founded in 2010, HungerToHope has been at the forefront of
                   environmental conservation and child welfare. Our journey
                   began with a simple idea: to create a sustainable future for
-                  all children while preserving our planet's resources.
+                  all children while preserving our planet&apos;s resources.
                 </p>
                 <p className="text-gray-600 mb-4">
-                  Over the years, we've grown from a small group of passionate
+                  Over the years, we&apos;ve grown from a small group of passionate
                   individuals to a global organization, touching the lives of
                   thousands of children and making a significant impact on our
                   environment.

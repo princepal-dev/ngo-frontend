@@ -17,22 +17,22 @@ export default function navbar() {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-emerald-400 " href="/">
+              <Link className="hover:text-emerald-400 " href="/about">
                 About us
               </Link>
             </li>
             <li>
-              <Link className="hover:text-emerald-400 " href="/">
+              <Link className="hover:text-emerald-400 " href="/works">
                 Our Works
               </Link>
             </li>
             <li>
-              <Link className="hover:text-emerald-400 " href="/">
+              <Link className="hover:text-emerald-400 " href="/get-involved">
                 Get Involved
               </Link>
             </li>
             <li>
-              <Link className="hover:text-emerald-400 " href="/">
+              <Link className="hover:text-emerald-400 " href="/contact">
                 Contact Us
               </Link>
             </li>
