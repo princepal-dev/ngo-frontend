@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 import "./globals.css";
+import AuthProvider from "@/components/auth-provider";
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${josefin.className} antialiased`}>
         <Navbar />
-        {children}
+        <AuthProvider>{children}</AuthProvider>
         <Footer />
       </body>
     </html>
