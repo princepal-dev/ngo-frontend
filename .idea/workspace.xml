@@ -4,31 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c08da58-6e6a-43fc-942f-941014ec6412" name="Changes" comment="Add Diff layout's">
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/[id]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/add/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/columns.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/contact-forms/columns.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/contact-forms/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/users/columns.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/users/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/volunteer-forms/columns.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/volunteer-forms/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Overview.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/RecentUsers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/avatar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/chart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/data-table.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/table.tsx" afterDir="false" />
+    <list default="true" id="2c08da58-6e6a-43fc-942f-941014ec6412" name="Changes" comment="Added Blogs">
+      <change afterPath="$PROJECT_DIR$/prisma.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/helper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(dashboard)/dashboard/contact-forms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/contact-forms/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(dashboard)/dashboard/users/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/users/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(dashboard)/dashboard/volunteer-forms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/volunteer-forms/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -116,7 +100,8 @@
       <workItem from="1733631959620" duration="3218000" />
       <workItem from="1733635227038" duration="13382000" />
       <workItem from="1733649632575" duration="752000" />
-      <workItem from="1733650432612" duration="6030000" />
+      <workItem from="1733650432612" duration="6452000" />
+      <workItem from="1733716531766" duration="1297000" />
     </task>
     <task id="LOCAL-00001" summary="Added Many Pages">
       <option name="closed" value="true" />
@@ -150,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733651148851</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Blogs">
+      <option name="closed" value="true" />
+      <created>1733657054512</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733657054512</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +165,7 @@
     <MESSAGE value="Added Auth" />
     <MESSAGE value="Added User Auth" />
     <MESSAGE value="Add Diff layout's" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Diff layout's" />
+    <MESSAGE value="Added Blogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Blogs" />
   </component>
 </project>

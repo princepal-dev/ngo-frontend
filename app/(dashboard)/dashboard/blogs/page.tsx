@@ -2,25 +2,7 @@ import { DataTable } from "@/components/ui/data-table";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { columns } from "./columns";
-
-async function getBlogs() {
-  return [
-    {
-      id: "1",
-      title: "Getting Started with Next.js",
-      author: "John Doe",
-      publishDate: "2023-05-15",
-      status: "Published",
-    },
-    {
-      id: "2",
-      title: "Advanced React Patterns",
-      author: "Jane Smith",
-      publishDate: "2023-05-20",
-      status: "Draft",
-    },
-  ];
-}
+import { getBlogs } from "@/utils/helper";
 
 export default async function BlogsPage() {
   const blogs = await getBlogs();
@@ -33,7 +15,15 @@ export default async function BlogsPage() {
           <Link href="/dashboard/blogs/add">Add New Blog</Link>
         </Button>
       </div>
-      <DataTable columns={columns} data={blogs} />
+      {blogs.length > 0 ? (
+        <DataTable columns={columns} data={blogs} />
+      ) : (
+        <div>
+          <h3 className="text-2xl font font-normal">
+            Time to write some fresh blogs !
+          </h3>
+        </div>
+      )}
     </div>
   );
 }

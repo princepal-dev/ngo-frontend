@@ -1,8 +1,8 @@
 import NextAuth from "next-auth";
-import { Role, PrismaClient } from "@prisma/client";
+import { Role } from "@prisma/client";
+import { PrismaAdapter } from "@auth/prisma-adapter";
 import authConfig from "@/auth.config";
-
-const prisma = new PrismaClient();
+import { prisma } from "@/prisma";
 
 const ADMIN_EMAILS = [
   "ujjawal8076@gmail.com",
@@ -13,6 +13,7 @@ const ADMIN_EMAILS = [
 ];
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
+  adapter: PrismaAdapter(prisma),
   pages: {
     signIn: "join-us",
   },
@@ -36,9 +37,6 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
       return true;
     },
     async session({ session, token }) {
-      const currentUser = await prisma.user.findUnique({
-        where: { email: session.user.email as string },
-      });
       if (session.user) {
         session.user.id = token.sub as string;
         session.user.name = token.name as string;
