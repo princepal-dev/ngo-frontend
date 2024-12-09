@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c08da58-6e6a-43fc-942f-941014ec6412" name="Changes" comment="Added Blogs">
-      <change afterPath="$PROJECT_DIR$/prisma.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/helper.ts" afterDir="false" />
+    <list default="true" id="2c08da58-6e6a-43fc-942f-941014ec6412" name="Changes" comment="fix in blogPage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/blogs/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/dashboard/contact-forms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/contact-forms/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/dashboard/users/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/users/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/dashboard/volunteer-forms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(dashboard)/dashboard/volunteer-forms/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +94,8 @@
       <workItem from="1733635227038" duration="13382000" />
       <workItem from="1733649632575" duration="752000" />
       <workItem from="1733650432612" duration="6452000" />
-      <workItem from="1733716531766" duration="1297000" />
+      <workItem from="1733716531766" duration="1698000" />
+      <workItem from="1733729616478" duration="816000" />
     </task>
     <task id="LOCAL-00001" summary="Added Many Pages">
       <option name="closed" value="true" />
@@ -143,7 +137,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733657054512</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed forms &amp; server actions yet to be added">
+      <option name="closed" value="true" />
+      <created>1733717912645</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733717912645</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix in blogPage">
+      <option name="closed" value="true" />
+      <created>1733718210981</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733718210981</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +176,8 @@
     <MESSAGE value="Added User Auth" />
     <MESSAGE value="Add Diff layout's" />
     <MESSAGE value="Added Blogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Blogs" />
+    <MESSAGE value="Fixed forms &amp; server actions yet to be added" />
+    <MESSAGE value="fix in blogPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix in blogPage" />
   </component>
 </project>
