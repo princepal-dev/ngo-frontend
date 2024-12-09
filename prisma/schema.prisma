@@ -44,10 +44,31 @@ model User {
   role          Role      @default(USER)
   accounts      Account[]
   sessions      Session[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  Blog          Blog[]
+}
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  Blog      Blog[]
+model VolunteerForm {
+  id           String  @id @default(cuid())
+  name         String
+  email        String  @unique
+  phone        String
+  address      String
+  state        String
+  country      String
+  zipCode      String
+  photo        String
+  identityCard String
+  message      String?
+}
+
+model ContactForm {
+  id      String @id @default(cuid())
+  name    String
+  email   String
+  subject String
+  message String
 }
 
 model Account {
