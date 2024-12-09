@@ -1,36 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ReactMarkdown from "react-markdown";
-
-async function getBlog(id: string) {
-  // Fetch blog data from your API here
-  return {
-    id,
-    title: "Sample Blog Post",
-    content: `
-# Sample Blog Post
-
-This is a sample blog post with Markdown support.
-
-## Features
-
-- Markdown rendering
-- Image support
-
-![Sample Image](/placeholder.svg?height=200&width=400)
-
-### Code Block
-
-\`\`\`javascript
-console.log('Hello, World!');
-\`\`\`
-
-Enjoy writing your blog posts!
-    `,
-    author: "John Doe",
-    publishDate: "2023-05-15",
-    status: "Published",
-  };
-}
+import {getBlog} from "@/utils/helper";
 
 export default async function BlogPage({ params }: { params: { id: string } }) {
   const blog = await getBlog(params.id);

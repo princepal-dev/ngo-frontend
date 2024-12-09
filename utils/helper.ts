@@ -15,3 +15,13 @@ export async function getBlogs() {
 export async function getVolunteerForms() {
   return [];
 }
+
+export async function getBlog(id: string) {
+  return {
+    id: id,
+    title: "",
+    content: "",
+    author: "",
+    publishDate: ""
+  };
+}
