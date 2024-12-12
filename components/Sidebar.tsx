@@ -17,8 +17,6 @@ const Sidebar = () => {
   const { data: session } = useSession();
   const pathname = usePathname();
 
-  console.log(session);
-
   const isActive = (path: string) => {
     return pathname === path ? "bg-gray-200" : "";
   };

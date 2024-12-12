@@ -6,7 +6,6 @@ import { Reviews } from "@/components/Reviews";
 export default function Home() {
   return (
     <div className="min-h-screen bg-emerald-50">
-      <header className="bg-emerald-600 text-white"></header>
 
       <main>
         <section className="bg-white py-12 md:py-20">

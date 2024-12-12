@@ -15,7 +15,8 @@ export default async function BlogsPage() {
           <Link href="/dashboard/blogs/add">Add New Blog</Link>
         </Button>
       </div>
-      {blogs.length > 0 ? (
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {blogs.length > 0 ? ( // @ts-expect-error
         <DataTable columns={columns} data={blogs} />
       ) : (
         <div>

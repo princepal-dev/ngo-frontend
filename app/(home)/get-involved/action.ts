@@ -1,8 +1,9 @@
 "use server";
 
 import { z } from "zod";
+import { PrismaClient } from "@prisma/client";
 
-const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+const prisma = new PrismaClient();
 
 const volunteerSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -13,17 +14,7 @@ const volunteerSchema = z.object({
   country: z.string().min(2, "Country must be at least 2 characters"),
   zipCode: z.string().min(5, "Zip code must be at least 5 characters"),
   message: z.string().optional(),
-  identityCard: z
-    .any()
-    .refine((file) => file?.size <= MAX_FILE_SIZE, `Max file size is 5MB.`)
-    .refine(
-      (file) =>
-        ["image/jpeg", "image/jpg", "image/png", "image/webp"].includes(
-          file?.type,
-        ),
-      "Only .jpg, .jpeg, .png formats are supported.",
-    )
-    .optional(),
+  identityCard: z.any().optional(),
 });
 
 export async function submitVolunteerForm(formData: FormData) {
@@ -36,7 +27,6 @@ export async function submitVolunteerForm(formData: FormData) {
     country: formData.get("country"),
     zipCode: formData.get("zipCode"),
     message: formData.get("message"),
-    identityCard: formData.get("identityCard"),
   });
 
   if (!validatedFields.success) {
@@ -46,7 +36,18 @@ export async function submitVolunteerForm(formData: FormData) {
     };
   }
 
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await prisma.volunteerForm.create({
+    data: {
+      name: validatedFields.data.name,
+      email: validatedFields.data.email,
+      phone: validatedFields.data.phone,
+      address: validatedFields.data.address,
+      state: validatedFields.data.state,
+      country: validatedFields.data.country,
+      zipCode: validatedFields.data.zipCode,
+      message: validatedFields.data.message,
+    },
+  });
 
   return {
     success: true,

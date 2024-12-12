@@ -4,8 +4,9 @@ import { getContactForms } from "@/utils/helper";
 
 export default async function ContactFormsPage() {
   const contactForms = await getContactForms();
+  console.log(contactForms);
 
-  return (
+    return (
     <div className="space-y-8">
       <h1 className="text-3xl font-bold">Contact Forms</h1>
       {contactForms.length > 0 ? (

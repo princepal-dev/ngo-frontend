@@ -12,27 +12,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import ReactMarkdown from "react-markdown";
 import { Upload, X } from "lucide-react";
 import { useDropzone } from "react-dropzone";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export default function AddBlogPage() {
   const router = useRouter();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [status, setStatus] = useState("draft");
   const [previewMode, setPreviewMode] = useState(false);
   const [images, setImages] = useState<{ file: File; preview: string }[]>([]);
 
-  // Clean up object URLs when component unmounts or images change
   useEffect(() => {
     return () => {
       images.forEach((image) => URL.revokeObjectURL(image.preview));
@@ -56,7 +50,7 @@ export default function AddBlogPage() {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: { "image/*": [] },
-    maxSize: 800 * 1024, // 800KB
+    maxSize: 800 * 1024,
   });
 
   const removeImage = (index: number) => {
@@ -75,12 +69,13 @@ export default function AddBlogPage() {
       return;
     }
 
-    // Simulate form submission
-    console.log({
-      title,
-      content,
-      status,
-      images: images.map((img) => img.file),
+    await prisma.blog.create({
+      data: {
+        title,
+        content,
+        images: images,
+        authorId: "ADMIN",
+      },
     });
 
     router.push("/dashboard/blogs");
@@ -137,18 +132,6 @@ export default function AddBlogPage() {
                   className="min-h-[200px]"
                 />
               )}
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="status">Status</Label>
-              <Select value={status} onValueChange={setStatus}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select status" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="draft">Draft</SelectItem>
-                  <SelectItem value="published">Published</SelectItem>
-                </SelectContent>
-              </Select>
             </div>
             <div className="space-y-2">
               <Label htmlFor="images">Images</Label>

@@ -9,6 +9,8 @@ export default async function VolunteerFormsPage() {
     <div className="space-y-8">
       <h1 className="text-3xl font-bold">Volunteer Forms</h1>
       {volunteerForms.length > 0 ? (
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         <DataTable columns={columns} data={volunteerForms} />
       ) : (
         <div>

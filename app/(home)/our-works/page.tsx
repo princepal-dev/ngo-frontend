@@ -44,7 +44,6 @@ const stats = [
 export default function OurWorkPage() {
   return (
     <div className="min-h-screen bg-emerald-50">
-      <header className="bg-emerald-600 text-white"></header>
 
       <main className="container mx-auto px-4 py-12 md:py-20">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-emerald-800 text-center">
