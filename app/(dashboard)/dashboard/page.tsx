@@ -1,10 +1,67 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { auth } from "@/auth";
+import { Suspense } from "react";
+import Spinner from "@/components/Spinner";
+import { PrismaClient } from "@prisma/client";
 import { Overview } from "@/components/Overview";
 import { RecentUsers } from "@/components/RecentUsers";
-import { auth } from "@/auth";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+const prisma = new PrismaClient();
+
+async function getUserData() {
+    const currentYear = new Date().getFullYear();
+    const startOfYear = new Date(currentYear, 0, 1);
+    const endOfYear = new Date(currentYear, 11, 31);
+
+    const userData = await prisma.user.groupBy({
+        by: ["createdAt"],
+        _count: {
+            id: true,
+        },
+        where: {
+            createdAt: {
+                gte: startOfYear,
+                lte: endOfYear,
+            },
+        },
+    });
+
+    const monthlyData = Array.from({ length: 12 }, (_, i) => ({
+        name: new Date(currentYear, i, 1).toLocaleString("default", {
+            month: "short",
+        }),
+        total: 0,
+    }));
+
+    userData.forEach((data) => {
+        const month = data.createdAt.getMonth();
+        monthlyData[month].total += data._count.id;
+    });
+
+    return monthlyData;
+}
 
 export default async function DashboardPage() {
     const session = await auth();
+    const userData = await getUserData();
+    const totalBlogs = await prisma.blog.findMany();
+    const totalVolunteer = await prisma.volunteerForm.findMany();
+    const totalUsers = await prisma.user.findMany({
+        where: {
+            role: "USER",
+        },
+    });
+    const newUsersInLastSevenDays = await prisma.user.groupBy({
+        by: ["createdAt"],
+        _count: {
+            id: true,
+        },
+        where: {
+            createdAt: {
+                gte: new Date(new Date().setDate(new Date().getDate() - 7)),
+            },
+        },
+    });
 
     return (
         <div className="space-y-8">
@@ -19,10 +76,9 @@ export default async function DashboardPage() {
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold">1,234</div>
-                        <p className="text-xs text-muted-foreground">
-                            +10% from last month
-                        </p>
+                        <div className="text-2xl font-bold">
+                            {totalUsers.length}
+                        </div>
                     </CardContent>
                 </Card>
                 <Card>
@@ -32,10 +88,9 @@ export default async function DashboardPage() {
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold">+48</div>
-                        <p className="text-xs text-muted-foreground">
-                            +8% from last week
-                        </p>
+                        <div className="text-2xl font-bold">
+                            {newUsersInLastSevenDays.length}
+                        </div>
                     </CardContent>
                 </Card>
                 <Card>
@@ -45,10 +100,9 @@ export default async function DashboardPage() {
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold">89</div>
-                        <p className="text-xs text-muted-foreground">
-                            +4 new this week
-                        </p>
+                        <div className="text-2xl font-bold">
+                            {totalBlogs.length}
+                        </div>
                     </CardContent>
                 </Card>
                 <Card>
@@ -58,10 +112,9 @@ export default async function DashboardPage() {
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <div className="text-2xl font-bold">12</div>
-                        <p className="text-xs text-muted-foreground">
-                            3 pending review
-                        </p>
+                        <div className="text-2xl font-bold">
+                            {totalVolunteer.length}
+                        </div>
                     </CardContent>
                 </Card>
             </div>
@@ -71,7 +124,9 @@ export default async function DashboardPage() {
                         <CardTitle>User Growth Overview</CardTitle>
                     </CardHeader>
                     <CardContent className="pl-2">
-                        <Overview />
+                        <Suspense fallback={<Spinner />}>
+                            <Overview data={userData} />
+                        </Suspense>
                     </CardContent>
                 </Card>
                 <Card className="col-span-3">
@@ -79,7 +134,9 @@ export default async function DashboardPage() {
                         <CardTitle>Recent Users</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <RecentUsers />
+                        <Suspense fallback={<Spinner />}>
+                            <RecentUsers totalUsers={totalUsers} />
+                        </Suspense>
                     </CardContent>
                 </Card>
             </div>

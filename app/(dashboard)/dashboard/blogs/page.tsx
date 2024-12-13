@@ -1,30 +1,24 @@
-import { DataTable } from "@/components/ui/data-table";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { columns } from "./columns";
-import { getBlogs } from "@/utils/helper";
+import { BlogForm } from "@/components/BlogForm";
+import { BlogList } from "@/components/BlogList";
 
-export default async function BlogsPage() {
-  const blogs = await getBlogs();
-
-  return (
-    <div className="space-y-8">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl font-bold">Blogs</h1>
-        <Button asChild>
-          <Link href="/dashboard/blogs/add">Add New Blog</Link>
-        </Button>
-      </div>
-      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-      {blogs.length > 0 ? ( // @ts-expect-error
-        <DataTable columns={columns} data={blogs} />
-      ) : (
-        <div>
-          <h3 className="text-2xl font font-normal">
-            Time to write some fresh blogs !
-          </h3>
+export default function AdminBlogsPage() {
+    return (
+        <div className="container mx-auto py-8">
+            <h1 className="text-2xl font-bold mb-4">Admin Blog Management</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h2 className="text-xl font-semibold mb-4">
+                        Create New Blog
+                    </h2>
+                    <BlogForm />
+                </div>
+                <div>
+                    <h2 className="text-xl font-semibold mb-4">
+                        Existing Blogs
+                    </h2>
+                    <BlogList />
+                </div>
+            </div>
         </div>
-      )}
-    </div>
-  );
+    );
 }
