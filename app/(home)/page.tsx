@@ -6,7 +6,6 @@ import { Reviews } from "@/components/Reviews";
 export default function Home() {
   return (
     <div className="min-h-screen bg-emerald-50">
-
       <main>
         <section className="bg-white py-12 md:py-20">
           <div className="container mx-auto px-4">
@@ -15,9 +14,14 @@ export default function Home() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-blue-950">
                   Together, We Can Make a Difference
                 </h1>
-                <p className="text-md md:text-xl mb-6 text-gray-500">
-                  Join us in our mission to create a sustainable future for all
-                  children
+                <p className="text-md md:text-xl mb-6 pr-8 text-gray-500">
+                  At 
+                  <span className="ml-1 text-zinc-600 font-bold">
+                     HungerToHope 
+                  </span>
+                   , we transform the lives of children in Aanganwadis by
+                  providing essential nutrition and healthcare, turning hunger
+                  into hope.
                 </p>
                 <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
                   <Button className="bg-emerald-600 text-white hover:bg-emerald-700 w-full sm:w-auto">
@@ -50,11 +54,11 @@ export default function Home() {
               Our Mission
             </h2>
             <p className="text-base md:text-lg text-center text-gray-600 max-w-3xl mx-auto">
-              We strive to protect and preserve our planet&apos;s natural
-              resources while improving the lives of underprivileged children.
-              Through education, community engagement, and sustainable
-              practices, we aim to build a greener, cleaner world for future
-              generations.
+              At HungerToHope, our mission is to provide a brighter future for
+              children in Aanganwadis by addressing their health and nutritional
+              needs. We believe that every child deserves a healthy start, and
+              we are committed to making this a reality through our dedicated
+              efforts and community support.
             </p>
             <div className=" my-16 flex gap-16 justify-center">
               <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center hover:bg-emerald-500 bg-slate-50 hover:text-white text-zinc-700  ">
