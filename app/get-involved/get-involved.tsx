@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -34,9 +33,7 @@ const volunteerFormSchema = z.object({
 
 export default function GetInvolved() {
   const { data: session } = useSession();
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<z.infer<typeof volunteerFormSchema>>({
     resolver: zodResolver(volunteerFormSchema),
     defaultValues: {
@@ -80,7 +77,6 @@ export default function GetInvolved() {
       });
     }
   }
-
   return (
     <div className="min-h-screen bg-emerald-50">
       <main className="py-12 md:py-20">

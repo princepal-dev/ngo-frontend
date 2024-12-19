@@ -12,7 +12,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { IoMdExit } from "react-icons/io";
 import SignOutButton from "@/components/signOutButton";
 
 export default async function navbar() {
@@ -81,16 +80,12 @@ export default async function navbar() {
                   <DropdownMenuSeparator className="border-t border-[#CCC5B9] dark:border-gray-200" />
 
                   <DropdownMenuItem className="text-gray-800 dark:text-[#FFFCF2] hover:outline-none hover:bg-[#E0DACF]  dark:hover:bg-[#33312E] rounded-md px-4 py-2 flex items-center gap-2">
-                    <Link
-                      href="/dashboard"
-                      target="_blank"
-                      className="flex items-center gap-2"
-                    >
+                    <Link href="/dashboard" className="flex items-center gap-2">
                       <FaHome className="text-2xl" /> Dashboard
                     </Link>
                   </DropdownMenuItem>
                   <div className=" bg-[#2D6A4F] text-[#FFFCF2] dark:text-[#FFFCF2] dark:bg-[#7f5af0] dark:hover:dark:bg-[#8a69ec] rounded-md  px-4 py-2 flex items-center gap-2">
-                    <IoMdExit className="text-2xl" /> <SignOutButton />
+                    <SignOutButton />
                   </div>
                 </DropdownMenuContent>
               </DropdownMenu>
