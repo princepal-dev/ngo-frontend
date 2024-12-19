@@ -69,10 +69,12 @@ export default function Home() {
               <div className=" my-16 flex gap-16 justify-center">
                 <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center hover:bg-emerald-500 bg-slate-50 hover:text-white text-zinc-700  ">
                   <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
-                  <p className="text-3xl mt-8 font-semibold">Clean Water</p>
+                  <p className="text-3xl mt-8 font-semibold">Healthy Futures</p>
                   <p className="mt-2 text-center">
-                    The sea freight service has grown consider ably in recent
-                    years. We spend testing to know your processes to.
+                    Millions of children in India’s Aanganwadis face
+                    malnutrition and inadequate healthcare. HungerToHope is
+                    committed to supporting their growth by providing essential
+                    resources for a healthier future
                   </p>
                 </div>
                 <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center bg-emerald-500 text-white  ">
@@ -85,10 +87,9 @@ export default function Home() {
                 </div>
                 <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center hover:bg-emerald-500 bg-slate-50 hover:text-white text-zinc-700  ">
                   <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
-                  <p className="text-3xl mt-8 font-semibold">Clean Water</p>
+                  <p className="text-3xl mt-8 font-semibold">Green Growth</p>
                   <p className="mt-2 text-center">
-                    The sea freight service has grown consider ably in recent
-                    years. We spend testing to know your processes to.
+                  Our mission is to ensure no one sleeps hungry by addressing malnutrition, promoting sustainable solutions, and empowering communities with resources and education for a healthier future.
                   </p>
                 </div>
               </div>
@@ -104,22 +105,28 @@ export default function Home() {
                 {[
                   {
                     title: "Child Education",
-                    image: "/placeholder.svg?height=200&width=300",
+                    image: "/education.jpg",
                   },
                   {
                     title: "Clean Water Initiative",
-                    image: "/placeholder.svg?height=200&width=300",
+                    image: "/cleanwaterjpg.jpg",
                   },
                   {
                     title: "Sustainable Agriculture",
-                    image: "/placeholder.svg?height=200&width=300",
+                    image: "/agriculturejpg.jpg",
                   },
                 ].map((project, index) => (
                   <div
                     key={index}
                     className="bg-emerald-50 rounded-lg shadow-md overflow-hidden"
                   >
-                    add Images
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={400}
+                      height={300}
+                      className="w-full h-48 object-cover"
+                    />
                     <div className="p-4">
                       <h3 className="font-bold text-xl mb-2 text-emerald-700">
                         {project.title}
