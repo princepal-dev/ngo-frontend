@@ -78,7 +78,7 @@ export default function GetInvolved() {
     }
   }
   return (
-    <div className="min-h-screen bg-emerald-50">
+    <div className=" bg-emerald-50">
       <main className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-emerald-800 text-center">
