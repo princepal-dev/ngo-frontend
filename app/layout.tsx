@@ -15,7 +15,8 @@ export const metadata: Metadata = {
     template: "%s / Hunger to Hope",
     default: "Welcome / Hunger to Hope",
   },
-  description: "",
+  description:
+    "Welcome to our website! Discover our mission, explore our work, and connect with us to make a difference.",
 };
 
 export default function PublicLayout({

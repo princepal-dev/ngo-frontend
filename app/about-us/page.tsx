@@ -18,9 +18,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn more about who we are, our mission, vision, and the values that drive our work.",
+};
 
 function ImpactGallerySection() {
   const impactGallery = [

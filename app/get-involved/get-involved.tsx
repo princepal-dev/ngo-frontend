@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -259,13 +259,12 @@ export default function GetInvolved() {
           </p>
           <div className="space-x-4">
             <Button className="bg-white text-emerald-600 hover:bg-emerald-100">
-              Donate
+              <a target="_blank" href="https://gofund.me/c4ef3801">
+                Donate Now
+              </a>
             </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-emerald-700"
-            >
-              Spread the Word
+            <Button className="bg-white text-emerald-600 hover:bg-emerald-100">
+              <Link href="/our-works">Spread the Word</Link>
             </Button>
           </div>
         </div>

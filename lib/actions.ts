@@ -15,23 +15,20 @@ export async function createBlog(formData: FormData) {
   const content = formData.get("content") as string;
   const imageUrls = formData.getAll("imageUrls") as string[];
 
-  try {
-    await prisma.blog.create({
-      data: {
-        title,
-        content,
-        authorId: "ADMIN",
-        images: {
-          create: imageUrls.map((url) => ({ url })),
-        },
+  await prisma.blog.create({
+    data: {
+      title,
+      content,
+      authorId: "ADMIN",
+      images: {
+        create: imageUrls.map((url) => ({ url })),
       },
-    });
-    revalidatePath("/admin/blogs");
-    return { success: true, message: "Blog created successfully" };
-  } catch (error) {
-    console.error("Failed to create blog:", error);
-    return { success: false, message: "Failed to create blog" };
-  }
+    },
+  });
+
+  revalidatePath("/admin/blogs");
+
+  return { success: true, message: "Blog created successfully" };
 }
 
 export async function deleteBlog(blogId: string) {
