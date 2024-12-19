@@ -5,12 +5,12 @@ import { Reviews } from "@/components/Reviews";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import React from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-
       <div className="min-h-screen bg-emerald-50">
         <main>
           <section className="bg-white py-12 md:py-20">
@@ -31,13 +31,15 @@ export default function Home() {
                   </p>
                   <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
                     <Button className="bg-emerald-600 text-white hover:bg-emerald-700 w-full sm:w-auto">
-                      Get Involved
+                      <Link href="/get-involved">Get Involved</Link>
                     </Button>
                     <Button
                       variant="outline"
                       className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 w-full sm:w-auto"
                     >
-                      Donate Now
+                      <a target="_blank" href="https://gofund.me/c4ef3801">
+                        Donate Now
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -89,7 +91,10 @@ export default function Home() {
                   <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
                   <p className="text-3xl mt-8 font-semibold">Green Growth</p>
                   <p className="mt-2 text-center">
-                  Our mission is to ensure no one sleeps hungry by addressing malnutrition, promoting sustainable solutions, and empowering communities with resources and education for a healthier future.
+                    Our mission is to ensure no one sleeps hungry by addressing
+                    malnutrition, promoting sustainable solutions, and
+                    empowering communities with resources and education for a
+                    healthier future.
                   </p>
                 </div>
               </div>
@@ -233,7 +238,9 @@ export default function Home() {
                 children&apos;s lives and the environment
               </p>
               <Button className="bg-white text-emerald-600 hover:bg-emerald-100">
-                Donate Now
+                <a target="_blank" href="https://gofund.me/c4ef3801">
+                  Donate Now
+                </a>
               </Button>
             </div>
           </section>
