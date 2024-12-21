@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -167,15 +166,7 @@ export default function ContactPage() {
                 <span>123 Eco Street, Green City, EC 12345</span>
               </div>
             </div>
-            <div className="bg-gray-200 w-full h-64 rounded-lg overflow-hidden">
-              <Image
-                src="/placeholder.svg?height=256&width=512"
-                alt="Map"
-                width={512}
-                height={256}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <div className="bg-gray-200 w-full h-64 rounded-lg overflow-hidden"></div>
           </div>
         </div>
       </main>
