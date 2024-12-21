@@ -261,15 +261,15 @@ export default function AboutUs() {
               and support.
             </p>
 
-            <Tabs defaultValue="fundraising" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8">
+            <Tabs defaultValue="fundraising" className="  w-full">
+              <TabsList className="grid w-full grid-cols-1 grid-rows-5  h-full sm:grid-cols-2 sm:grid-rows-3 md:h-full  md:grid-rows-1 gap-2 md:grid-cols-5 mb-8">
                 <TabsTrigger value="fundraising">Fundraising</TabsTrigger>
                 <TabsTrigger value="budget">Budget Planning</TabsTrigger>
                 <TabsTrigger value="health">Health Check-ups</TabsTrigger>
                 <TabsTrigger value="meal">Meal Planning</TabsTrigger>
                 <TabsTrigger value="sustainability">Sustainability</TabsTrigger>
               </TabsList>
-              <TabsContent value="fundraising">
+              <TabsContent  value="fundraising">
                 <ApproachCard
                   icon={<DollarSign className="h-6 w-6 text-emerald-600" />}
                   title="Fundraising"
@@ -397,7 +397,7 @@ export default function AboutUs() {
             </p>
 
             <Tabs defaultValue="donate" className="w-full max-w-4xl mx-auto">
-              <TabsList className="grid w-full grid-cols-3 mb-8 bg-emerald-700/50">
+              <TabsList className="grid w-full sm:grid-cols-3 grid-cols-1  mb-10 h-full bg-emerald-700/50">
                 <TabsTrigger
                   value="donate"
                   className="text-white data-[state=active]:bg-emerald-500"
