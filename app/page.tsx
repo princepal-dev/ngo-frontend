@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { GiWaterSplash } from "react-icons/gi";
-import { Reviews } from "@/components/Reviews";
 import Navbar from "@/components/Navbar";
 
 import Footer from "@/components/Footer";
@@ -10,7 +9,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div className="min-h-screen bg-emerald-50">
         <main>
           <section className="bg-white py-12 md:py-20">
@@ -30,12 +29,12 @@ export default function Home() {
                     into hope.
                   </p>
                   <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
-                    <Button className="bg-emerald-600 text-white hover:bg-emerald-700 w-full sm:w-auto">
+                    <Button className="bg-emerald-600 text-white hover:bg-emerald-700">
                       <Link href="/get-involved">Get Involved</Link>
                     </Button>
                     <Button
                       variant="outline"
-                      className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 w-full sm:w-auto"
+                      className="border-emerald-600 text-emerald-600 hover:bg-emerald-50"
                     >
                       <a target="_blank" href="https://gofund.me/c4ef3801">
                         Donate Now
@@ -47,7 +46,7 @@ export default function Home() {
                   <Image
                     src="/hero.jpg"
                     alt="Poor children in need of help"
-                    width={600}
+                    width={500}
                     height={400}
                     className="rounded-lg shadow-lg w-full h-auto"
                   />
@@ -219,13 +218,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </section>
-
-          <section className="py-4">
-            <p className="text-emerald-500 text-2xl font-semibold text-center">
-              What people says
-            </p>
-            <Reviews />
           </section>
 
           <section className="py-12 md:py-16 bg-emerald-600 text-white">
