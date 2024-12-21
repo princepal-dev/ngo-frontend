@@ -27,7 +27,7 @@ export default function PublicLayout({
   return (
     <html lang="en">
       <body
-        className={`${josefin.className} grid grid-rows-[auto_1fr_auto] antialiased`}
+        className={`${josefin.className} relative grid grid-rows-[auto_1fr_auto] antialiased`}
       >
         <AuthProvider>{children}</AuthProvider>
       </body>

@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 import { GiWaterSplash } from "react-icons/gi";
 import { Reviews } from "@/components/Reviews";
 import Navbar from "@/components/Navbar";
+
 import Footer from "@/components/Footer";
-import React from "react";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <div className="min-h-screen bg-emerald-50">
         <main>
           <section className="bg-white py-12 md:py-20">
@@ -68,7 +68,7 @@ export default function Home() {
                 healthy start, and we are committed to making this a reality
                 through our dedicated efforts and community support.
               </p>
-              <div className=" my-16 flex gap-16 justify-center">
+              <div className=" my-16 flex gap-16 flex-wrap justify-center">
                 <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center hover:bg-emerald-500 bg-slate-50 hover:text-white text-zinc-700  ">
                   <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
                   <p className="text-3xl mt-8 font-semibold">Healthy Futures</p>
@@ -106,7 +106,7 @@ export default function Home() {
               <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-950 mb-8 md:mb-12">
                 Our Projects
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              <div className="flex gap-6 flex-wrap  items-center justify-center">
                 {[
                   {
                     title: "Child Education",
@@ -123,7 +123,7 @@ export default function Home() {
                 ].map((project, index) => (
                   <div
                     key={index}
-                    className="bg-emerald-50 rounded-lg shadow-md overflow-hidden"
+                    className="bg-emerald-50  w-96 rounded-lg shadow-md overflow-hidden"
                   >
                     <Image
                       src={project.image}
@@ -156,7 +156,7 @@ export default function Home() {
               <h2 className="text-2xl md:text-3xl text-blue-950 font-bold mb-4 md:mb-6">
                 Our Expert Volunteer Always ready
               </h2>
-              <div className="flex justify-center gap-8">
+              <div className="flex sm:flex-row items-center flex-col justify-center gap-8">
                 <div className="w-72 flex flex-col justify-between   rounded-lg items-center  bg-slate-50  text-zinc-700  ">
                   <div>
                     <Image
