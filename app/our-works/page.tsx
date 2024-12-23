@@ -34,7 +34,6 @@ export default async function OurWorkPage() {
   const blogs = await prisma.blog.findMany({
     include: { images: true },
   });
-  console.log(blogs);
 
   return (
     <>

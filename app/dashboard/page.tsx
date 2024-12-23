@@ -5,6 +5,15 @@ import { PrismaClient } from "@prisma/client";
 import { Overview } from "@/components/Overview";
 import { RecentUsers } from "@/components/RecentUsers";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { redirect } from "next/navigation";
+
+const ADMIN_EMAILS = [
+  "ujjawal8076@gmail.com",
+  "rishabpal2000@gmail.com",
+  "anjali8129@gmail.com",
+  "arthbhardwaj1234@gmail.com",
+  "bhardwaj.avni20396@gmail.com",
+];
 
 const prisma = new PrismaClient();
 
@@ -43,6 +52,14 @@ async function getUserData() {
 
 export default async function DashboardPage() {
   const session = await auth();
+
+  if (
+    !session ||
+    !session.user?.email ||
+    !ADMIN_EMAILS.includes(session.user.email)
+  ) {
+    redirect("/dashboard/settings");
+  }
 
   const userData = await getUserData();
   const totalBlogs = await prisma.blog.findMany();
