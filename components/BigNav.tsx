@@ -20,9 +20,9 @@ export default async function BigNav() {
   return (
     <nav className="hidden md:flex justify-center px-4 shadow-xl py-6">
       <div className="max-w-screen-2xl w-full">
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <Link href="/">
-            <Image src={logo} height={50} width={50} alt="logo" />
+            <Image src={logo} height={100} width={100} alt="logo" />
           </Link>
 
           <div className=" md:flex-row hidden md:flex h-96 md:h-16 flex-col items-center gap-10">
@@ -39,7 +39,15 @@ export default async function BigNav() {
               </li>
               <li>
                 <Link className="hover:text-emerald-400 " href="/our-works">
-                  Our Works
+                  Our Work
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-emerald-400 "
+                  href="/news-and-stories"
+                >
+                  News & Stories
                 </Link>
               </li>
               <li>

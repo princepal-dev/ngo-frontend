@@ -29,98 +29,6 @@ export const metadata: Metadata = {
     "Learn more about who we are, our mission, vision, and the values that drive our work.",
 };
 
-function ImpactGallerySection() {
-  const impactGallery = [
-    {
-      title: "Clean Water Initiative",
-      image: "/cleanwaterjpg.jpg",
-      description: "Providing clean water to 10,000+ children",
-    },
-    {
-      title: "Education for All",
-      image: "/education.jpg",
-      description: "Supporting education for 5,000+ underprivileged children",
-    },
-    {
-      title: "Sustainable Agriculture",
-      image: "/agriculturejpg.jpg",
-      description:
-        "Implementing sustainable farming practices in 50+ communities",
-    },
-    {
-      title: "Community Empowerment",
-      image: "/empowerment-1.jpg",
-      description:
-        "Empowering 100+ local communities through various initiatives",
-    },
-  ];
-
-  return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-emerald-800 text-center">
-          Our Impact
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {impactGallery.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105"
-            >
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-lg mb-2 text-emerald-700">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{item.description}</p>
-                <Link
-                  href="#"
-                  className="text-emerald-600 hover:text-emerald-800 font-medium"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function VideoSection() {
-  return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-emerald-800 text-center">
-          Experience Our Journey
-        </h2>
-        <div className="max-w-3xl  mx-auto">
-          <div className="aspect-w-16 h-96 aspect-h-9">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-lg shadow-lg"
-              height={800}
-            ></iframe>
-          </div>
-          <p className="text-center mt-4 text-gray-600">
-            Watch our story and see how we&apos;ve made a difference over the
-            years.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 interface ApproachCardProps {
   icon: React.ReactNode;
   title: string;
@@ -225,10 +133,11 @@ export default function AboutUs() {
                 </h2>
                 <p className="text-gray-600 mb-4">
                   Welcome to HungerToHope, where we are dedicated to
-                  transforming the lives of children in Aanganwadis. Our mission
-                  is to ensure that every child receives the nutrition and
-                  healthcare they need to thrive. Through our comprehensive and
-                  sustainable approach, we aim to turn hunger into hope for
+                  transforming the lives of children in Anganwadis often the
+                  only wholesome meal these young minds receive each day. Our
+                  mission is to ensure that every child receives the nutrition
+                  and healthcare they need to thrive. Through our comprehensive
+                  and sustainable approach, we aim to turn hunger into hope for
                   these young lives.
                 </p>
                 <p className="text-gray-600 mb-4">
@@ -240,7 +149,7 @@ export default function AboutUs() {
                   resources and support.
                 </p>
                 <Button className="bg-emerald-600 text-white hover:bg-emerald-700">
-                  Learn More About Our Impact
+                  <Link href="/our-works">Learn More About Our Impact</Link>
                 </Button>
               </div>
             </div>
@@ -252,13 +161,23 @@ export default function AboutUs() {
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-emerald-800 text-center">
               Why We Do What We Do
             </h2>
+            <p className="text-gray-600 mb-6 max-w-3xl mx-auto text-center">
+              This initiative supports the United Nations Sustainable
+              Development Goal of Zero Hunger, striving to end hunger, ensure
+              food security, and improve nutrition worldwide.
+            </p>
+
             <p className="text-gray-600 mb-12 max-w-3xl mx-auto text-center">
-              Millions of children in Aanganwadis across India suffer from
-              malnutrition and lack of proper healthcare. These children are the
-              future, and it is our responsibility to ensure they have the
-              opportunity to grow and develop healthily. HungerToHope is
-              dedicated to bridging this gap by providing essential resources
-              and support.
+              At Hunger to Hope, we believe that no child should be deprived of
+              education due to hunger or malnutrition. Our mission is driven by
+              the conviction that every child deserves the opportunity to learn,
+              grow, and reach their full potential. By addressing the root
+              causes of hunger and malnutrition, we aim to break the cycle of
+              poverty and create a brighter future for communities around the
+              world. We are committed to providing the nourishment and support
+              needed to ensure that every child can thrive academically and
+              personally. Together, we can transform lives and turn hunger into
+              hope.
             </p>
 
             <Tabs defaultValue="fundraising" className="  w-full">
@@ -269,7 +188,7 @@ export default function AboutUs() {
                 <TabsTrigger value="meal">Meal Planning</TabsTrigger>
                 <TabsTrigger value="sustainability">Sustainability</TabsTrigger>
               </TabsList>
-              <TabsContent  value="fundraising">
+              <TabsContent value="fundraising">
                 <ApproachCard
                   icon={<DollarSign className="h-6 w-6 text-emerald-600" />}
                   title="Fundraising"
@@ -338,45 +257,40 @@ export default function AboutUs() {
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-emerald-800 text-center">
               Our Team
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid justify-center items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  name: "Jane Doe",
-                  role: "Executive Director",
-                  image: "/realtor-1.jpeg",
+                  name: "Arth Bhardwaj",
+                  role: "Founder",
+                  image: "/arth-img.jpeg",
                 },
                 {
-                  name: "John Smith",
-                  role: "Head of Operations",
-                  image: "/realtor-2.jpeg",
+                  name: "Avni Bhardwaj",
+                  role: "Co-founder",
+                  image: "/avni-img.jpeg",
                 },
                 {
-                  name: "Emily Brown",
-                  role: "Project Manager",
-                  image: "/realtor-3.jpeg",
-                },
-                {
-                  name: "Emily Brown",
-                  role: "Project Manager",
-                  image: "/realtor-1.jpeg",
+                  name: "Mehar Bajaj",
+                  role: "Volunteer",
+                  image: "/avni-img.jpeg",
                 },
               ].map((member, index) => (
                 <div
                   key={index}
-                  className="bg-emerald-50 rounded-lg shadow-md overflow-hidden"
+                  className=" flex flex-col justify-center items-center rounded-lg overflow-hidden"
                 >
                   <Image
                     src={member.image}
                     alt={member.name}
-                    width={300}
-                    height={300}
-                    className="w-full h-64 object-cover"
+                    width={250}
+                    height={250}
+                    className="rounded-full"
                   />
-                  <div className="p-4">
-                    <h3 className="font-bold text-xl mb-1 text-emerald-700">
+                  <div className="p-4 text-center">
+                    <h3 className="font-bold text-2xl mb-1 text-black">
                       {member.name}
                     </h3>
-                    <p className="text-gray-600">{member.role}</p>
+                    <p className="text-lg text-gray-600">{member.role}</p>
                   </div>
                 </div>
               ))}
@@ -463,8 +377,28 @@ export default function AboutUs() {
             </Tabs>
           </div>
         </section>
-        <ImpactGallerySection />
-        <VideoSection />
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-emerald-800 text-center">
+              Experience Our Journey
+            </h2>
+            <div className="max-w-3xl  mx-auto">
+              <div className="aspect-w-16 h-96 aspect-h-9">
+                <iframe
+                  src="https://www.youtube.com/embed/Cotv_lMW_wM"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg shadow-lg"
+                  height={800}
+                ></iframe>
+              </div>
+              <p className="text-center mt-4 text-gray-600">
+                Watch our story and see how we&apos;ve made a difference over
+                the years.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

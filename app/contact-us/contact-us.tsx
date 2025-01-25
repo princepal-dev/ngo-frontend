@@ -155,7 +155,9 @@ export default function ContactPage() {
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
                 <Mail className="text-emerald-600" />
-                <span>info@ecoaction.org</span>
+                <a href="mailto:contact@hungertohope.org">
+                  contact@hungertohope.org
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="text-emerald-600" />
