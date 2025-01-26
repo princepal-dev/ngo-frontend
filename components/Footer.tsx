@@ -8,34 +8,34 @@ import logo from "@/public/HungerToHope.png";
 import Image from "next/image";
 import { MdEmail } from "react-icons/md";
 
+
+
+
 export default function Footer() {
   return (
     <footer className="bg-emerald-800 text-white py-8">
-      <div className="container mx-auto my-8">
-        <div className="flex flex-wrap justify-between">
-          <div className="flex flex-col">
+      <div className="container mx-auto px-4 my-8">
+        <div className="flex flex-col md:flex-row md:justify-between space-y-8 md:space-y-0">
+          <div className="flex flex-col items-center md:items-start">
             <Link href="/">
               <Image
                 width={70}
                 height={70}
-                src={logo}
+                src={logo} 
                 alt="logo"
                 className="my-4"
               />
             </Link>
-            <div className="my-1">
-              <p className="font-semibold pr-6">
-                We&#39;d love to hear from you!
-              </p>
-              <p className="font-semibold pr-6">Contact us anytime.</p>
+            <div className="my-1 text-center md:text-left">
+              <p className="font-semibold">We&apos;d love to hear from you!</p>
+              <p className="font-semibold">Contact us anytime.</p>
             </div>
           </div>
 
-          <div className="flex justify-between space-x-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div>
-              <h2 className="font-bold">ABOUT US</h2>
-
-              <div className="flex flex-col mt-4 space-y-1 text-sm">
+              <h2 className="font-bold text-center md:text-left">ABOUT US</h2>
+              <div className="flex flex-col mt-4 space-y-1 text-sm items-center md:items-start">
                 <Link href="/about-us" className="hover:text-emerald-300">
                   About Us
                 </Link>
@@ -51,53 +51,45 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex-col flex space-y-4">
-              <div className="flex flex-col space-y-2">
-                <h2 className="font-bold">OUR WORK</h2>
-                <div className="flex flex-col mt-4 space-y-1 text-sm">
+            <div className="flex flex-col space-y-8">
+              <div>
+                <h2 className="font-bold text-center md:text-left">OUR WORK</h2>
+                <div className="flex flex-col mt-4 space-y-1 text-sm items-center md:items-start">
                   <Link href="/our-works" className="hover:text-emerald-300">
                     Our Work
                   </Link>
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-2">
-                <h2 className="font-bold">DONATE</h2>
-                <div className="flex flex-col mt-4 space-y-1 text-sm">
-                  <a
-                    href="https://gofund.me/c4ef3801"
-                    className="hover:text-emerald-300"
-                  >
+              <div>
+                <h2 className="font-bold text-center md:text-left">DONATE</h2>
+                <div className="flex flex-col mt-4 space-y-1 text-sm items-center md:items-start">
+                  <a href="https://gofund.me/c4ef3801" className="hover:text-emerald-300">
                     Online Donations
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="flex-col flex space-y-4">
-              <div className="flex flex-col space-y-2">
-                <h2 className="font-bold">GET IN TOUCH</h2>
-
-                <div className="flex space-x-4 text-sm">
+            <div className="flex flex-col space-y-8">
+              <div>
+                <h2 className="font-bold text-center md:text-left">GET IN TOUCH</h2>
+                <div className="flex justify-center md:justify-start space-x-4 text-sm mt-4">
                   <a
                     href="mailto:contact@hungertohope.org"
                     className="flex items-center justify-center hover:text-emerald-300"
                   >
                     <MdEmail className="text-2xl" />
                   </a>
-                  <a
-                    href="tel:"
-                    className="flex items-center justify-center hover:text-emerald-300"
-                  >
+                  <a href="tel:" className="flex items-center justify-center hover:text-emerald-300">
                     <FaPhoneAlt className="text-lg" />
                   </a>
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-2">
-                <h2 className="font-bold">GET INVOLVED</h2>
-
-                <div className="flex flex-col space-y-1 text-sm">
+              <div>
+                <h2 className="font-bold text-center md:text-left">GET INVOLVED</h2>
+                <div className="flex flex-col mt-4 space-y-1 text-sm items-center md:items-start">
                   <Link href="/get-involved" className="hover:text-emerald-300">
                     Get Involved
                   </Link>
@@ -109,33 +101,28 @@ export default function Footer() {
 
         <hr className="my-8" />
 
-        <div className="flex justify-between items-center">
-          <div>
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="text-center md:text-left">
             <p>&copy; {new Date().getFullYear()} HungerToHope Foundation.</p>
           </div>
 
           <div className="flex items-center justify-center space-x-4">
-            <Link
-              href="#"
-              className="hover:text-emerald-300 text-sm md:text-base"
-            >
+            <Link href="#" className="hover:text-emerald-300 text-sm md:text-base">
               <FaFacebookF className="text-xl" />
             </Link>
-            <Link
-              href="#"
-              className="hover:text-emerald-300 text-sm md:text-base"
-            >
+            <Link href="#" className="hover:text-emerald-300 text-sm md:text-base">
               <FaXTwitter className="text-xl" />
             </Link>
-            <Link
-              href="#"
-              className="hover:text-emerald-300 text-sm md:text-base"
-            >
+            <Link href="#" className="hover:text-emerald-300 text-sm md:text-base">
               <FaInstagram className="text-xl" />
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }
+
+
+
+

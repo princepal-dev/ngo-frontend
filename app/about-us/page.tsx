@@ -2,15 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  DollarSign,
-  Stethoscope,
-  Apple,
-  Leaf,
-  Heart,
-  HandHeart,
-  Share2,
-} from "lucide-react";
+
 import {
   Card,
   CardContent,
@@ -20,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import type { Metadata } from "next";
 import React from "react";
+import { FaApple, FaDollarSign, FaHandHoldingHeart, FaHeart, FaLeaf, FaShare, FaStethoscope } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -48,7 +41,7 @@ function ApproachCard({ icon, title, description, items }: ApproachCardProps) {
         <ul className="space-y-2">
           {items.map((item, index) => (
             <li key={index} className="flex items-start">
-              <Heart className="h-5 w-5 text-emerald-500 mr-2 mt-1 flex-shrink-0" />
+              <FaHeart className="h-5 w-5 text-emerald-500 mr-2 mt-1 flex-shrink-0" />
               <span>{item}</span>
             </li>
           ))}
@@ -183,7 +176,7 @@ export default function AboutUs() {
             </TabsList>
             <TabsContent value="fundraising">
               <ApproachCard
-                icon={<DollarSign className="h-6 w-6 text-emerald-600" />}
+                icon={<FaDollarSign className="h-6 w-6 text-emerald-600" />}
                 title="Fundraising"
                 description="We organize various fundraising events and campaigns to gather the necessary resources to support our initiatives."
                 items={[
@@ -195,7 +188,7 @@ export default function AboutUs() {
             </TabsContent>
             <TabsContent value="budget">
               <ApproachCard
-                icon={<DollarSign className="h-6 w-6 text-emerald-600" />}
+                icon={<FaDollarSign className="h-6 w-6 text-emerald-600" />}
                 title="Budget Planning"
                 description="Our finance team meticulously plans and allocates funds to ensure that every dollar is used effectively and efficiently."
                 items={[
@@ -207,7 +200,7 @@ export default function AboutUs() {
             </TabsContent>
             <TabsContent value="health">
               <ApproachCard
-                icon={<Stethoscope className="h-6 w-6 text-emerald-600" />}
+                icon={<FaStethoscope className="h-6 w-6 text-emerald-600" />}
                 title="Health Check-ups"
                 description="Regular health assessments are conducted to monitor and improve the well-being of the children. We collaborate with healthcare professionals to provide comprehensive check-ups."
                 items={[
@@ -219,7 +212,7 @@ export default function AboutUs() {
             </TabsContent>
             <TabsContent value="meal">
               <ApproachCard
-                icon={<Apple className="h-6 w-6 text-emerald-600" />}
+                icon={<FaApple className="h-6 w-6 text-emerald-600" />}
                 title="Meal Planning"
                 description="We develop nutritious meal plans tailored to the specific needs of each child, ensuring they receive balanced and healthy diets."
                 items={[
@@ -231,7 +224,7 @@ export default function AboutUs() {
             </TabsContent>
             <TabsContent value="sustainability">
               <ApproachCard
-                icon={<Leaf className="h-6 w-6 text-emerald-600" />}
+                icon={<FaLeaf className="h-6 w-6 text-emerald-600" />}
                 title="Sustainability Measures"
                 description="We focus on creating long-term strategies to maintain and expand our impact, ensuring that our efforts continue to benefit future generations."
                 items={[
@@ -329,7 +322,7 @@ export default function AboutUs() {
             </TabsList>
             <TabsContent value="donate">
               <InvolvementCard
-                icon={<Heart className="h-8 w-8 text-emerald-300" />}
+                icon={<FaHeart className="h-8 w-8 text-emerald-300" />}
                 title="Donate"
                 description="Your financial contributions can make a significant impact. Every donation helps us provide better nutrition and healthcare to the children."
                 items={[
@@ -346,7 +339,7 @@ export default function AboutUs() {
             </TabsContent>
             <TabsContent value="volunteer">
               <InvolvementCard
-                icon={<HandHeart className="h-8 w-8 text-emerald-300" />}
+                icon={<FaHandHoldingHeart className="h-8 w-8 text-emerald-300" />}
                 title="Volunteer"
                 description="Join our team of dedicated volunteers who work tirelessly to support our initiatives. Your time and skills can make a real difference."
                 items={[
@@ -359,7 +352,7 @@ export default function AboutUs() {
             </TabsContent>
             <TabsContent value="spread">
               <InvolvementCard
-                icon={<Share2 className="h-8 w-8 text-emerald-300" />}
+                icon={<FaShare className="h-8 w-8 text-emerald-300" />}
                 title="Spread the Word"
                 description="Help us raise awareness about our cause by sharing our mission with your friends, family, and social networks."
                 items={[
