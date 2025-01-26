@@ -1,8 +1,27 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { GiWaterSplash } from "react-icons/gi";
+import { GiSprout } from "react-icons/gi";
+import { FaLeaf } from "react-icons/fa";
+import { FaDroplet } from "react-icons/fa6";
 
+const missionData = [
+  {
+    icon: FaLeaf,
+    title: "Healthy Futures",
+    description: "Supporting children's growth in Aanganwadis by providing essential resources for a healthier future.",
+  },
+  {
+    icon: FaDroplet,
+    title: "Clean Water",
+    description: "Ensuring access to clean and safe drinking water for children in underserved communities.",
+  },
+  {
+    icon: GiSprout,
+    title: "Green Growth",
+    description: "Promoting sustainable solutions and empowering communities with resources for a healthier future.",
+  },
+]
 export default function Home() {
   return (
     <div className="min-h-screen bg-emerald-50">
@@ -50,50 +69,27 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-12 md:py-16 bg-emerald-100">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-950 mb-6 md:mb-8">
-              Our Mission
-            </h2>
-            <p className="text-base md:text-lg text-center text-gray-600 max-w-3xl mx-auto">
-              At HungerToHope, our mission is to provide a brighter future for
-              children in Aanganwadis by addressing their health and nutritional
-              needs. We believe that every child deserves a healthy start, and
-              we are committed to making this a reality through our dedicated
-              efforts and community support.
-            </p>
-            <div className=" my-16 flex gap-16 flex-wrap justify-center">
-              <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center hover:bg-emerald-500 bg-slate-50 hover:text-white text-zinc-700  ">
-                <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
-                <p className="text-3xl mt-8 font-semibold">Healthy Futures</p>
-                <p className="mt-2 text-center">
-                  Millions of children in India’s Aanganwadis face malnutrition
-                  and inadequate healthcare. HungerToHope is committed to
-                  supporting their growth by providing essential resources for a
-                  healthier future
-                </p>
-              </div>
-              <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center bg-emerald-500 text-white  ">
-                <GiWaterSplash className="h-20 w-20 bg-white text-emerald-400 px-2 py-3 rounded-full" />
-                <p className="text-3xl mt-8 font-semibold">Clean Water</p>
-                <p className="mt-2 text-center">
-                  The sea freight service has grown consider ably in recent
-                  years. We spend testing to know your processes to.
-                </p>
-              </div>
-              <div className="w-72 flex flex-col gap-4 px-6 py-16 rounded-lg items-center hover:bg-emerald-500 bg-slate-50 hover:text-white text-zinc-700  ">
-                <GiWaterSplash className="h-20 w-20 bg-emerald-300 text-white transition-all  px-2 py-3 rounded-full" />
-                <p className="text-3xl mt-8 font-semibold">Green Growth</p>
-                <p className="mt-2 text-center">
-                  Our mission is to ensure no one sleeps hungry by addressing
-                  malnutrition, promoting sustainable solutions, and empowering
-                  communities with resources and education for a healthier
-                  future.
-                </p>
-              </div>
+        <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Our Mission</h2>
+        <p className="text-lg text-center text-gray-600 max-w-2xl mx-auto mb-16">
+          At HungerToHope, we strive to provide a brighter future for children in Aanganwadis by addressing their health
+          and nutritional needs.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {missionData.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center p-6 bg-white rounded-lg shadow-sm transition-all duration-300 hover:shadow-md"
+            >
+              <item.icon className="h-12 w-12 text-emerald-500 mb-4" />
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h3>
+              <p className="text-gray-600 text-center">{item.description}</p>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </div>
+    </section>
       </main>
     </div>
   );
