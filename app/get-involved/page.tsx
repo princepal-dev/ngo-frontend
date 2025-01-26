@@ -1,7 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import GetInvolved from "@/app/get-involved/get-involved";
 
 export const metadata: Metadata = {
   title: "Volunteer With Us",
@@ -10,11 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return (
-    <>
-      <Navbar />
-      <GetInvolved />
-      <Footer />
-    </>
-  );
+  return <div>Get Involved</div>;
 }

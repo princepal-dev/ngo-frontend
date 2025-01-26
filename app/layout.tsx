@@ -1,9 +1,9 @@
 import React from "react";
-import { Josefin_Sans } from "next/font/google";
-import type { Metadata } from "next";
-
 import "@/app/globals.css";
-import AuthProvider from "@/components/auth-provider";
+import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Josefin_Sans } from "next/font/google";
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -29,7 +29,9 @@ export default function PublicLayout({
       <body
         className={`${josefin.className} relative grid grid-rows-[auto_1fr_auto] antialiased`}
       >
-        <AuthProvider>{children}</AuthProvider>
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );
