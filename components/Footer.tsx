@@ -1,15 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { FaFacebookF, FaPhoneAlt } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import logo from "@/public/HungerToHope.png";
+import { FaFacebookF, FaPhoneAlt } from "react-icons/fa";
 
 import Image from "next/image";
 import { MdEmail } from "react-icons/md";
-
-
-
 
 export default function Footer() {
   return (
@@ -21,7 +18,7 @@ export default function Footer() {
               <Image
                 width={70}
                 height={70}
-                src={logo} 
+                src={logo}
                 alt="logo"
                 className="my-4"
               />
@@ -42,10 +39,16 @@ export default function Footer() {
                 <Link href="/" className="hover:text-emerald-300">
                   Our Vision & Mission
                 </Link>
-                <Link href="/terms" className="hover:text-emerald-300">
+                <Link
+                  href="/terms-and-conditions"
+                  className="hover:text-emerald-300"
+                >
                   Terms & Conditions
                 </Link>
-                <Link href="/privacy-policy" className="hover:text-emerald-300">
+                <Link
+                  href="/privacy-and-policy"
+                  className="hover:text-emerald-300"
+                >
                   Privacy Policy
                 </Link>
               </div>
@@ -64,7 +67,10 @@ export default function Footer() {
               <div>
                 <h2 className="font-bold text-center md:text-left">DONATE</h2>
                 <div className="flex flex-col mt-4 space-y-1 text-sm items-center md:items-start">
-                  <a href="https://gofund.me/c4ef3801" className="hover:text-emerald-300">
+                  <a
+                    href="https://gofund.me/c4ef3801"
+                    className="hover:text-emerald-300"
+                  >
                     Online Donations
                   </a>
                 </div>
@@ -73,7 +79,9 @@ export default function Footer() {
 
             <div className="flex flex-col space-y-8">
               <div>
-                <h2 className="font-bold text-center md:text-left">GET IN TOUCH</h2>
+                <h2 className="font-bold text-center md:text-left">
+                  GET IN TOUCH
+                </h2>
                 <div className="flex justify-center md:justify-start space-x-4 text-sm mt-4">
                   <a
                     href="mailto:contact@hungertohope.org"
@@ -81,14 +89,19 @@ export default function Footer() {
                   >
                     <MdEmail className="text-2xl" />
                   </a>
-                  <a href="tel:" className="flex items-center justify-center hover:text-emerald-300">
+                  <a
+                    href="tel:"
+                    className="flex items-center justify-center hover:text-emerald-300"
+                  >
                     <FaPhoneAlt className="text-lg" />
                   </a>
                 </div>
               </div>
 
               <div>
-                <h2 className="font-bold text-center md:text-left">GET INVOLVED</h2>
+                <h2 className="font-bold text-center md:text-left">
+                  GET INVOLVED
+                </h2>
                 <div className="flex flex-col mt-4 space-y-1 text-sm items-center md:items-start">
                   <Link href="/get-involved" className="hover:text-emerald-300">
                     Get Involved
@@ -107,22 +120,27 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center justify-center space-x-4">
-            <Link href="#" className="hover:text-emerald-300 text-sm md:text-base">
+            <Link
+              href="#"
+              className="hover:text-emerald-300 text-sm md:text-base"
+            >
               <FaFacebookF className="text-xl" />
             </Link>
-            <Link href="#" className="hover:text-emerald-300 text-sm md:text-base">
+            <Link
+              href="#"
+              className="hover:text-emerald-300 text-sm md:text-base"
+            >
               <FaXTwitter className="text-xl" />
             </Link>
-            <Link href="#" className="hover:text-emerald-300 text-sm md:text-base">
+            <Link
+              href="#"
+              className="hover:text-emerald-300 text-sm md:text-base"
+            >
               <FaInstagram className="text-xl" />
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
-
-
-

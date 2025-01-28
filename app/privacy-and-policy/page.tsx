@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import Link from "next/link";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function PrivacyPage() {
   return (
@@ -8,14 +8,24 @@ export default function PrivacyPage() {
       <div className="max-w-4xl mx-auto">
         <Card className="p-6 sm:p-8 bg-white shadow-lg">
           <div className="prose prose-emerald max-w-none">
-            <h1 className="text-3xl font-bold text-emerald-800 mb-6">Privacy Policy</h1>
+            <h1 className="text-3xl font-bold text-emerald-800 mb-6">
+              Privacy Policy
+            </h1>
 
             <div className="space-y-6">
               <section>
-                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">1. Information We Collect</h2>
-                <p className="text-gray-600 mb-4">We collect information that you provide directly to us, including:</p>
+                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">
+                  1. Information We Collect
+                </h2>
+                <p className="text-gray-600 mb-4">
+                  We collect information that you provide directly to us,
+                  including:
+                </p>
                 <ul className="list-disc pl-6 text-gray-600 space-y-2">
-                  <li>Personal identification information (Name, email address, phone number)</li>
+                  <li>
+                    Personal identification information (Name, email address,
+                    phone number)
+                  </li>
                   <li>Volunteer registration information</li>
                   <li>Donation details</li>
                   <li>Communication preferences</li>
@@ -23,8 +33,12 @@ export default function PrivacyPage() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">2. How We Use Your Information</h2>
-                <p className="text-gray-600 mb-4">We use the collected information for:</p>
+                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">
+                  2. How We Use Your Information
+                </h2>
+                <p className="text-gray-600 mb-4">
+                  We use the collected information for:
+                </p>
                 <ul className="list-disc pl-6 text-gray-600 space-y-2">
                   <li>Processing donations and issuing tax receipts</li>
                   <li>Coordinating volunteer activities</li>
@@ -35,10 +49,12 @@ export default function PrivacyPage() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">3. Information Sharing</h2>
+                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">
+                  3. Information Sharing
+                </h2>
                 <p className="text-gray-600 mb-4">
-                  We do not sell, trade, or rent your personal information to third parties. We may share your
-                  information with:
+                  We do not sell, trade, or rent your personal information to
+                  third parties. We may share your information with:
                 </p>
                 <ul className="list-disc pl-6 text-gray-600 space-y-2">
                   <li>Service providers who assist in our operations</li>
@@ -48,9 +64,12 @@ export default function PrivacyPage() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">4. Data Security</h2>
+                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">
+                  4. Data Security
+                </h2>
                 <p className="text-gray-600 mb-4">
-                  We implement appropriate security measures to protect your personal information, including:
+                  We implement appropriate security measures to protect your
+                  personal information, including:
                 </p>
                 <ul className="list-disc pl-6 text-gray-600 space-y-2">
                   <li>Encryption of sensitive data</li>
@@ -61,7 +80,9 @@ export default function PrivacyPage() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">5. Your Rights</h2>
+                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">
+                  5. Your Rights
+                </h2>
                 <p className="text-gray-600 mb-4">You have the right to:</p>
                 <ul className="list-disc pl-6 text-gray-600 space-y-2">
                   <li>Access your personal information</li>
@@ -73,20 +94,27 @@ export default function PrivacyPage() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">6. Cookies and Tracking</h2>
+                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">
+                  6. Cookies and Tracking
+                </h2>
                 <p className="text-gray-600 mb-4">
-                  Our website uses cookies and similar tracking technologies to improve user experience and analyze
-                  website traffic.
+                  Our website uses cookies and similar tracking technologies to
+                  improve user experience and analyze website traffic.
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">7. Contact Us</h2>
+                <h2 className="text-2xl font-semibold text-emerald-700 mb-4">
+                  7. Contact Us
+                </h2>
                 <p className="text-gray-600 mb-4">
-                  If you have questions about our privacy policy or practices, please contact us at:
+                  If you have questions about our privacy policy or practices,
+                  please contact us at:
                 </p>
                 <div className="bg-emerald-50 p-4 rounded-lg">
-                  <p className="text-emerald-800">Email: contact@hungertohope.org</p>
+                  <p className="text-emerald-800">
+                    Email: contact@hungertohope.org
+                  </p>
                   <p className="text-emerald-800">Phone: </p>
                   <p className="text-emerald-800">Address: </p>
                 </div>
@@ -97,7 +125,7 @@ export default function PrivacyPage() {
               <Button asChild variant="outline">
                 <Link href="/">Return Home</Link>
               </Button>
-              <Button asChild>
+              <Button asChild className="bg-green-500 hover:bg-green-600">
                 <Link href="/terms">View Terms and Conditions</Link>
               </Button>
             </div>
@@ -105,6 +133,5 @@ export default function PrivacyPage() {
         </Card>
       </div>
     </div>
-  )
+  );
 }
-
