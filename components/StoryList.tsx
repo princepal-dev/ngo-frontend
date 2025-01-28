@@ -21,7 +21,7 @@ export default async function StoryList() {
   return (
     <>
       {allStories?.stories?.length > 0 ? (
-        <div>
+        <div className="grid grid-cols-3">
           {allStories.stories.map((story: StoryCardTypes, index) => (
             <StoryCard
               image_url={story.image_url}

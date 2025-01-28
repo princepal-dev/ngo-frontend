@@ -1,6 +1,13 @@
 import React from "react";
+import type { Metadata } from "next";
 import BlogList from "@/components/BlogList";
 import StoryList from "@/components/StoryList";
+
+export const metadata: Metadata = {
+  title: "Blogs & Stories",
+  description:
+    "Explore inspiring stories, insights, and updates through our curated blogs and articles.",
+};
 
 export default function Page() {
   return (

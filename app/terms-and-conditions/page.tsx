@@ -1,6 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Terms and Conditions",
+  description:
+    "Review the terms and conditions that govern the use of our platform, outlining your rights and responsibilities.",
+};
 
 export default function TermsPage() {
   return (

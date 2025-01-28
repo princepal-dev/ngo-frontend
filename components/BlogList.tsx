@@ -23,7 +23,7 @@ export default async function BlogList() {
   return (
     <>
       {allBlogs?.blogs?.length > 0 ? (
-        <div>
+        <div className="grid grid-cols-3">
           {allBlogs.blogs.map((blog: BlogCardType) => (
             <BlogCard
               image_url={blog.image_url}

@@ -1,6 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Privacy and Policy",
+  description:
+    "Understand how we collect, use, and protect your personal information, and review your privacy rights.",
+};
 
 export default function PrivacyPage() {
   return (

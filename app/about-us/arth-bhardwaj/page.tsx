@@ -1,6 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
 import img from "@/public/arth-img.jpeg";
+
+export const metadata: Metadata = {
+  title: "Arth Bhardwaj",
+};
 
 export default function Page() {
   return (
