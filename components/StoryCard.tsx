@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { IoOpenOutline } from "react-icons/io5";
 
-type StoryCardTypes = {
+export type StoryCardTypes = {
   image_url: string;
   title: string;
   page_url: string;
@@ -17,7 +17,7 @@ export default function StoryCard({
     <div className="w-96 bg-white rounded-lg overflow-hidden shadow-md">
       <div>
         <Image
-          src={image_url}
+          src={`http://localhost:5000/${image_url}`}
           width={384}
           height={500}
           alt={title.split(" ").join("-")}
