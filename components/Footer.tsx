@@ -42,10 +42,10 @@ export default function Footer() {
                 <Link href="/" className="hover:text-emerald-300">
                   Our Vision & Mission
                 </Link>
-                <Link href="/" className="hover:text-emerald-300">
+                <Link href="/terms" className="hover:text-emerald-300">
                   Terms & Conditions
                 </Link>
-                <Link href="/" className="hover:text-emerald-300">
+                <Link href="/privacy-policy" className="hover:text-emerald-300">
                   Privacy Policy
                 </Link>
               </div>
