@@ -8,7 +8,7 @@ interface StoryResponse {
 
 export default async function StoryList() {
   const res = await fetch(
-    "http://localhost:5000/api/v1/story/get-all-stories",
+    "https://api.hungertohope.org/api/v1/story/get-all-stories",
     { cache: "no-cache" },
   );
 

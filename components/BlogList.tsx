@@ -7,9 +7,12 @@ interface BlogsResponse {
 }
 
 export default async function BlogList() {
-  const res = await fetch("http://localhost:5000/api/v1/blogs/get-all-blogs", {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://api.hungertohope.org/api/v1/blogs/get-all-blogs",
+    {
+      cache: "no-store",
+    },
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch blogs");
