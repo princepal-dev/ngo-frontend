@@ -57,7 +57,7 @@ export default async function OurWorkPage() {
         <h2 className="text-center text-3xl mb-8 font-bold text-green-600">
           Mid-Day Meals for Anganwadi
         </h2>
-        <Carousel>
+        <Carousel className="px-3">
           <CarouselContent>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <Image src={img1} quality={80} alt="img-1" />

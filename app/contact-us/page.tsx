@@ -18,11 +18,11 @@ export default function Page() {
           Contact Us
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8 mt-8 px-4">
           <form className="flex flex-col space-y-3">
             <h3 className="text-2xl font-bold text-green-500">Get in Touch</h3>
 
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 ">
               <div className="flex flex-col space-y-2">
                 <label htmlFor="name">
                   Name <span className="text-red-500">*</span>

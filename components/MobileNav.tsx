@@ -12,8 +12,8 @@ export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <nav className="flex flex-col md:hidden justify-between items-center bg-white border-cyan-950 shadow-xl p-6 ">
-      <div className="flex items-center justify-between">
+    <nav className="flex flex-col md:hidden justify-between relative items-center bg-white border-cyan-950 shadow-xl p-6 ">
+      <div className="flex w-full items-center justify-between">
         <Link href="/">
           <Image src={logo} alt="logo" className="w-10 h-10" />
         </Link>
@@ -34,8 +34,8 @@ export default function Navbar() {
       </div>
 
       {isActive && (
-        <div className="w-full p-4 bg-white shadow-lg">
-          <MobileNavItems />
+        <div className="w-44 h-screen fixed top-0 right-0 ml-auto p-4 bg-white shadow-lg">
+          <MobileNavItems setIsActive={setIsActive}/>
         </div>
       )}
     </nav>
