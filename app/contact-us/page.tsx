@@ -96,16 +96,24 @@ export default function Page() {
               </div>
               <div className="flex items-center space-x-4">
                 <BsFillTelephoneFill className="text-xl text-green-500" />
-                <a href="tel:123-456-7890" className="hover:underline">
-                  (123) 456-7890
+                <a href="tel:+14085643752" className="hover:underline">
+                  +1 4085643752
                 </a>
               </div>
               <div className="flex items-center space-x-4">
                 <FaLocationDot className="text-xl text-green-500" />
-                <a href="">123 Eco Street, Green City, EC 12345</a>
+                <a href=""> 20396 Clifden way Cupertino California 95014</a>
               </div>
 
-              <div className="h-60 w-full bg-zinc-400 rounded-md"></div>
+              <div className="h-60 w-full rounded-md">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.6197298982543!2d-122.030406!3d37.312236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5068e44ff51%3A0x40f1d40c65c33b2!2s20396%20Clifden%20Way%2C%20Cupertino%2C%20CA%2095014%2C%20USA!5e1!3m2!1sen!2sin!4v1738248068760!5m2!1sen!2sin"
+                  width="600"
+                  height="240"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </div>
         </div>

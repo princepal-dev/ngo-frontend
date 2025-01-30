@@ -95,7 +95,7 @@ export default async function OurWorkPage() {
       </section>
       <section className="my-10">
         <h2 className="text-center text-3xl mb-8 font-bold text-green-600">
-          Mid-Day Meals for Anganwadi
+          Our Workshops
         </h2>
         <Carousel className="px-3 my-4">
           <CarouselContent>
@@ -133,47 +133,14 @@ export default async function OurWorkPage() {
           <CarouselPrevious className="hidden lg:block" />
           <CarouselNext className="hidden lg:block" />
         </Carousel>
-      </section>{" "}
+      </section>
       <section className="my-10">
         <h2 className="text-center text-3xl mb-8 font-bold text-green-600">
-          Mid-Day Meals for Anganwadi
+          Heath camp
         </h2>
-        <Carousel className="px-3 my-4">
-          <CarouselContent>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img1} quality={80} alt="img-1" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img2} quality={80} alt="img-2" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img3} quality={80} alt="img-3" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img4} quality={80} alt="img-4" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img5} quality={80} alt="img-5" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img6} quality={80} alt="img-6" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img7} quality={80} alt="img-7" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img8} quality={80} alt="img-8" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img9} quality={80} alt="img-9" />
-            </CarouselItem>
-            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img10} quality={80} alt="img-10" />
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious className="hidden lg:block" />
-          <CarouselNext className="hidden lg:block" />
-        </Carousel>
+        <p className="text-center text-2xl font-bold">
+          On Jan 30 2025 ( stay tuned)
+        </p>
       </section>
     </main>
   );
