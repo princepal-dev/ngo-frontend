@@ -12,7 +12,15 @@ import {
 } from "@/components/ui/card";
 import type { Metadata } from "next";
 import React from "react";
-import { FaApple, FaDollarSign, FaHandHoldingHeart, FaHeart, FaLeaf, FaShare, FaStethoscope } from "react-icons/fa";
+import {
+  FaApple,
+  FaDollarSign,
+  FaHandHoldingHeart,
+  FaHeart,
+  FaLeaf,
+  FaShare,
+  FaStethoscope,
+} from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -255,11 +263,6 @@ export default function AboutUs() {
                 role: "Co-founder",
                 image: "/avni-img.jpeg",
               },
-              {
-                name: "Mehar Bajaj",
-                role: "Volunteer",
-                image: "/avni-img.jpeg",
-              },
             ].map((member, index) => (
               <div
                 key={index}
@@ -274,7 +277,10 @@ export default function AboutUs() {
                 />
                 <div className="p-4 text-center">
                   <Link
-                    href={`/about-us/${member.name.toLowerCase().split(" ").join("-")}`}
+                    href={`/about-us/${member.name
+                      .toLowerCase()
+                      .split(" ")
+                      .join("-")}`}
                     className="font-bold text-2xl mb-1 text-black hover:underline"
                   >
                     {member.name}
@@ -283,6 +289,46 @@ export default function AboutUs() {
                 </div>
               </div>
             ))}
+
+            <div className=" flex flex-col justify-center items-center rounded-lg overflow-hidden">
+              <Image
+                src="/tanya.jpg"
+                alt="tanya"
+                width={250}
+                height={250}
+                className="rounded-full"
+              />
+              <div className="p-4 text-center">
+                <p className="font-bold text-2xl mb-1 text-black ">Tanya</p>
+                <p className="text-lg text-gray-600">Project Manager</p>
+              </div>
+            </div>
+            <div className=" flex flex-col justify-center items-center rounded-lg overflow-hidden">
+              <Image
+                src="/anjali.jpg"
+                alt="annjali"
+                width={250}
+                height={250}
+                className="rounded-full"
+              />
+              <div className="p-4 text-center">
+                <p className="font-bold text-2xl mb-1 text-black ">Anjali Kang</p>
+                <p className="text-lg text-gray-600">Project Officer</p>
+              </div>
+            </div>
+            <div className=" flex flex-col justify-center items-center rounded-lg overflow-hidden">
+              <Image
+                src="/tanya.jpg"
+                alt="tanya"
+                width={250}
+                height={250}
+                className="rounded-full"
+              />
+              <div className="p-4 text-center">
+                <p className="font-bold text-2xl mb-1 text-black ">Mehar Bajaj</p>
+                <p className="text-lg text-gray-600">Volunteer</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -339,7 +385,9 @@ export default function AboutUs() {
             </TabsContent>
             <TabsContent value="volunteer">
               <InvolvementCard
-                icon={<FaHandHoldingHeart className="h-8 w-8 text-emerald-300" />}
+                icon={
+                  <FaHandHoldingHeart className="h-8 w-8 text-emerald-300" />
+                }
                 title="Volunteer"
                 description="Join our team of dedicated volunteers who work tirelessly to support our initiatives. Your time and skills can make a real difference."
                 items={[
