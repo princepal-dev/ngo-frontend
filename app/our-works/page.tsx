@@ -12,6 +12,7 @@ import img7 from "@/public/gallery/g7.jpg";
 import img8 from "@/public/gallery/g8.jpg";
 import img9 from "@/public/gallery/g9.jpg";
 import img10 from "@/public/gallery/g10.jpg";
+import img14 from "@/public/gallery/g14.jpg";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -20,6 +21,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import VideoComponent from "@/components/Video";
 
 export const metadata: Metadata = {
   title: "Our Work",
@@ -45,24 +47,39 @@ export default async function OurWorkPage() {
         </div>
         <div className="flex items-center justify-center my-4">
           <Button className="bg-green-600 hover:bg-green-700 text-white font-bold">
-            <a href="">Donate</a>
+            <a href="https://gofund.me/c4ef3801" target="_blank">
+              Donate
+            </a>
           </Button>
         </div>
-        <div className="flex items-center justify-center py-4">
+        <div className="flex items-center justify-center py-4 md:w-1/2 mx-auto">
           <Image src={fund} alt="fundraiser-img" />
         </div>
       </section>
       <section className="my-10">
-        <h2 className="text-center text-3xl mb-8 font-bold text-green-600">
-          Mid-Day Meals for Anganwadi
-        </h2>
+        <div>
+          <h2 className="text-center text-3xl font-bold text-green-600">
+            Mid-Day Meals for Anganwadi
+          </h2>
+          <p className="text-center my-4 text-lg mx-auto">
+            At Hunger to Hope, we provide nutritious mid-day meals to aanganwadi
+            centers. We believe that every child deserves the chance to grow,
+            learn, and thrive, free from the pains of hunger. We want to ensure
+            that these underprivileged children receive the essential
+            nourishment they need, not just to survive, but to dream big and
+            achieve their fullest potential. By addressing hunger and fostering
+            healthy eating habits, we are committed to creating a brighter,
+            healthier future filled with hope and opportunity for these young
+            souls.
+          </p>
+        </div>
         <Carousel className="px-3 my-4">
           <CarouselContent>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img1} quality={80} alt="img-1" />
+              <Image src={img14} quality={80} alt="img-1" />
             </CarouselItem>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-              <Image src={img2} quality={80} alt="img-2" />
+              <VideoComponent src={"/gallery/md.mp4"} />
             </CarouselItem>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <Image src={img3} quality={80} alt="img-3" />
