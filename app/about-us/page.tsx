@@ -114,13 +114,13 @@ export default function AboutUs() {
             About HungerToHope
           </h1>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 flex justify-end items-center">
               <Image
                 src="/about-hero.jpg"
                 alt="HungerToHope team"
-                width={600}
+                width={450}
                 height={400}
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="rounded-lg shadow-lg h-auto"
               />
             </div>
             <div className="md:w-1/2">
@@ -276,16 +276,17 @@ export default function AboutUs() {
                   className="rounded-full"
                 />
                 <div className="p-4 text-center">
+                  <p>{member.name}</p>
+                  <p className="text-lg text-gray-600">{member.role}</p>
                   <Link
                     href={`/about-us/${member.name
                       .toLowerCase()
                       .split(" ")
                       .join("-")}`}
-                    className="font-bold text-2xl mb-1 text-black hover:underline"
+                    className="font-bold mb-1 text-black hover:underline"
                   >
-                    {member.name}
+                    Know more
                   </Link>
-                  <p className="text-lg text-gray-600">{member.role}</p>
                 </div>
               </div>
             ))}
@@ -312,21 +313,10 @@ export default function AboutUs() {
                 className="rounded-full"
               />
               <div className="p-4 text-center">
-                <p className="font-bold text-2xl mb-1 text-black ">Anjali Kang</p>
+                <p className="font-bold text-2xl mb-1 text-black ">
+                  Anjali Kang
+                </p>
                 <p className="text-lg text-gray-600">Project Officer</p>
-              </div>
-            </div>
-            <div className=" flex flex-col justify-center items-center rounded-lg overflow-hidden">
-              <Image
-                src="/tanya.jpg"
-                alt="tanya"
-                width={250}
-                height={250}
-                className="rounded-full"
-              />
-              <div className="p-4 text-center">
-                <p className="font-bold text-2xl mb-1 text-black ">Mehar Bajaj</p>
-                <p className="text-lg text-gray-600">Volunteer</p>
               </div>
             </div>
           </div>
