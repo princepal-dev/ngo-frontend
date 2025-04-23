@@ -7,7 +7,7 @@ import { MdOutlineHealthAndSafety } from "react-icons/md";
 const missionData = [
   {
     icon: FaLeaf,
-    title: "Healthy Lifestyles",
+    title: "Mid Day Meals",
     description:
       "Ensuring underprivileged children receive wholesome mid-day meals to support their growth and education.",
   },
