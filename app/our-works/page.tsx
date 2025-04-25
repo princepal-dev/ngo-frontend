@@ -20,9 +20,8 @@ import img18 from "@/public/gallery/dm4.jpeg";
 import img19 from "@/public/gallery/dm5.jpeg";
 import img20 from "@/public/gallery/dm6.jpg";
 import img21 from "@/public/gallery/dm7.jpg";
-// @ts-ignore
-import img22 from "@/public/gallery/dm8.JPG";
-import img23 from "@/public/gallery/dm9.jpg";
+// import img22 from "@/public/gallery/dm8.JPG";
+// import img23 from "@/public/gallery/dm9.jpg";
 import img24 from "@/public/gallery/h1.jpeg";
 import img25 from "@/public/gallery/h2.jpeg";
 import img26 from "@/public/gallery/h3.jpeg";
@@ -76,7 +75,7 @@ export default async function OurWorkPage() {
           </p>
           <Carousel className="px-2">
             <CarouselContent>
-              {[img15, img16, img17, img18, img19, img20, img21, img22, img23, img14, img4, img6, img7].map((img, i) => (
+              {[img15, img16, img17, img18, img19, img20, img21, img14, img4, img6, img7].map((img, i) => (
                   <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
                     <Image src={img} quality={80} alt={`img-${i}`} className="w-full h-auto rounded-lg" />
                   </CarouselItem>
