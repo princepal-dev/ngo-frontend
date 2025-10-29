@@ -34,7 +34,7 @@ export default async function BigNav() {
                   className="hover:text-emerald-400 "
                   href="/blog-and-stories"
                 >
-                  Blogs & Stories
+                  News & Stories
                 </Link>
               </li>
               <li>

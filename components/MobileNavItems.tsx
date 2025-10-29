@@ -25,7 +25,7 @@ export default function MobileNavItems({ setIsActive }: MobileNavItemsProps) {
           Our Works
         </Link>
         <Link className="hover:text-emerald-400 " href="/blog-and-stories">
-          Blogs & Stories
+          News & Stories
         </Link>
         <Link className="hover:text-emerald-400" href="/get-involved">
           Get Involved
