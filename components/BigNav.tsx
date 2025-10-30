@@ -12,7 +12,7 @@ export default async function BigNav() {
             <Image src={logo} height={100} width={100} alt="logo" />
           </Link>
 
-          <div className=" md:flex-row hidden md:flex h-96 md:h-16 flex-col items-center gap-10">
+          <div className=" md:flex-row hidden md:flex h-16 flex-col items-center gap-10">
             <ul className="md:flex-row flex flex-col gap-10 md:mt-0 mt-6 text-md md:text-sm md:gap-12 text-zinc-800  font-medium items-center transition-all duration-500 ">
               <li>
                 <Link className="hover:text-emerald-400 " href="/">
@@ -32,7 +32,7 @@ export default async function BigNav() {
               <li>
                 <Link
                   className="hover:text-emerald-400 "
-                  href="/blog-and-stories"
+                  href="/news-and-stories"
                 >
                   News & Stories
                 </Link>

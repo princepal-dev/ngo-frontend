@@ -34,9 +34,16 @@ export default function Navbar() {
       </div>
 
       {isActive && (
-        <div className="w-44 h-screen fixed top-0 right-0 ml-auto p-4 bg-white shadow-lg">
-          <MobileNavItems setIsActive={setIsActive}/>
-        </div>
+        <>
+          <button
+            aria-label="Close menu backdrop"
+            onClick={() => setIsActive(false)}
+            className="fixed inset-0 bg-black/30"
+          />
+          <div className="w-64 h-screen fixed top-0 right-0 ml-auto p-4 bg-white shadow-lg">
+            <MobileNavItems setIsActive={setIsActive}/>
+          </div>
+        </>
       )}
     </nav>
   );

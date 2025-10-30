@@ -19,13 +19,14 @@ export default function BlogCard({
   id,
 }: BlogCardType) {
   return (
-    <div className="w-96 bg-white overflow-hidden shadow rounded-lg">
-      <div>
+    <div className="w-96 bg-white overflow-hidden rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+      <div className="w-full h-48 relative">
         <Image
-          width={384}
-          height={400}
           src={image_url}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 384px"
           alt={title.toLowerCase().split(" ").join("-")}
+          className="object-cover"
         />
       </div>
 
@@ -41,7 +42,7 @@ export default function BlogCard({
         <div className="flex justify-between mt-4">
           <Link
             className="py-1 flex items-center space-x-2 rounded-md hover:underline transition-all ease-linear duration-200"
-            href={`/blog-and-stories/blog/${id}`}
+            href={`/news-and-stories/blog/${id}`}
           >
             <span>Read Full Blog</span> <IoOpenOutline />
           </Link>

@@ -23,7 +23,7 @@ export default async function BlogList() {
   return (
     <>
       {allBlogs?.blogs?.length > 0 ? (
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {allBlogs.blogs.map((blog: BlogCardType) => (
             <BlogCard
               image_url={blog.image_url}
@@ -36,9 +36,24 @@ export default async function BlogList() {
           ))}
         </div>
       ) : (
-        <div className="text-center my-8">
-          <p className="text-3xl font-bold">We will add more blogs soon!</p>
-        </div>
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            {[0,1,2].map((i) => (
+              <div key={i} className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
+                <div className="h-40 w-full rounded-lg bg-gray-200 animate-pulse" />
+                <div className="mt-4 space-y-2">
+                  <div className="h-5 w-3/4 bg-gray-200 rounded animate-pulse" />
+                  <div className="h-4 w-1/2 bg-gray-200 rounded animate-pulse" />
+                  <div className="h-4 w-full bg-gray-200 rounded animate-pulse" />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center my-8">
+            <p className="text-lg text-gray-600">No blogs yet. We’re preparing content.</p>
+            <a href="#news" className="inline-block mt-3 text-green-600 font-medium hover:underline">See latest news →</a>
+          </div>
+        </>
       )}
     </>
   );

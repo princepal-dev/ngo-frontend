@@ -53,7 +53,7 @@ export default async function OurWorkPage() {
             Fundraiser - USA
           </h2>
           <p className="text-lg mb-6">
-            At <span className="font-bold">Hunger to Hope</span>, we successfully raised $5,715 USD to provide nutritious Midday Meals for underserved children. These meals not only combat hunger but also empower young minds to focus on education and create brighter futures.
+          At <span className="font-bold">Hunger to Hope</span>, we have successfully conducted multiple fundraisers in both the USA and India, raising more than $10,000 to provide nutritious midday meals for underserved children. These meals not only combat hunger but also empower young minds to focus on education and build brighter futures. We have active fundraisers ongoing—please click below to support our cause.
           </p>
           <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 mb-6">
             <a href="https://gofund.me/c4ef3801" target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,7 @@ export default async function OurWorkPage() {
             This Diwali, help us light up lives by providing nutritious meals to children and families in need. Join Hunger to Hope in spreading care, joy, and hope — one meal at a time.
           </p>
           <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 mb-6">
-            <a href="/get-involved" rel="noopener noreferrer">
+            <a href="https://milaap.org/fundraisers/arthbhardwaj2025?utm_medium=campaign_page_share&utm_source=copy" rel="noopener noreferrer">
               Donate Now
             </a>
           </Button>

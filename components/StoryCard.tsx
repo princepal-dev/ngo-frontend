@@ -14,13 +14,14 @@ export default function StoryCard({
   page_url,
 }: StoryCardTypes) {
   return (
-    <div className="w-96 bg-white rounded-lg overflow-hidden shadow-md">
-      <div>
+    <div className="w-96 bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+      <div className="w-full h-56 relative">
         <Image
-          src={`http://localhost:5000/${image_url}`}
-          width={384}
-          height={500}
+          src={image_url}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 384px"
           alt={title.split(" ").join("-")}
+          className="object-cover"
         />
       </div>
       <div className="mt-2 px-4 py-2 flex flex-col space-y-2">

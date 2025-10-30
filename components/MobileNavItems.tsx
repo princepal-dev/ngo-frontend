@@ -24,7 +24,7 @@ export default function MobileNavItems({ setIsActive }: MobileNavItemsProps) {
         <Link className="hover:text-emerald-400" href="/our-works">
           Our Works
         </Link>
-        <Link className="hover:text-emerald-400 " href="/blog-and-stories">
+        <Link className="hover:text-emerald-400 " href="/news-and-stories">
           News & Stories
         </Link>
         <Link className="hover:text-emerald-400" href="/get-involved">
