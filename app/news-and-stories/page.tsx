@@ -1,7 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import StoryList from "@/components/StoryList";
 
 export const metadata: Metadata = {
   title: "News & Stories",
@@ -89,8 +88,39 @@ export default function Page() {
           <p className="mt-2 text-center text-gray-600 max-w-2xl mx-auto">
             Real experiences from the people and places we serve.
           </p>
-
-          <StoryList />
+          <div className="mt-10">
+              <div className="px-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="relative w-full rounded-lg overflow-hidden pt-[125%]">
+                    <iframe title="Instagram video" src="https://www.instagram.com/reel/DP4ECnUk8RJ/embed" className="absolute inset-0 w-full h-full" allowTransparency={true} allowFullScreen />
+                  </div>
+                  <div className="relative w-full rounded-lg overflow-hidden pt-[125%]">
+                    <iframe title="Instagram post DPl8Ks5E4Bj" src="https://www.instagram.com/p/DPl8Ks5E4Bj/embed" className="absolute inset-0 w-full h-full" allowTransparency={true} allowFullScreen />
+                  </div>
+                  <div className="relative w-full rounded-lg overflow-hidden pt-[125%]">
+                    <iframe title="Instagram post DMNR-j3zJhl" src="https://www.instagram.com/p/DMNR-j3zJhl/embed" className="absolute inset-0 w-full h-full" allowTransparency={true} allowFullScreen />
+                  </div>
+                  <div className="relative w-full rounded-lg overflow-hidden pt-[125%]">
+                    <iframe title="Instagram post DLhRwELTU40" src="https://www.instagram.com/p/DLhRwELTU40/embed" className="absolute inset-0 w-full h-full" allowTransparency={true} allowFullScreen />
+                  </div>
+                  <div className="relative w-full rounded-lg overflow-hidden pt-[125%]">
+                    <iframe title="Instagram post DLSIf6ATgbj" src="https://www.instagram.com/p/DLSIf6ATgbj/embed" className="absolute inset-0 w-full h-full" allowTransparency={true} allowFullScreen />
+                  </div>
+                  <div className="relative w-full rounded-lg overflow-hidden pt-[125%]">
+                    <iframe title="Instagram post DKmCtLrTRah" src="https://www.instagram.com/p/DKmCtLrTRah/embed" className="absolute inset-0 w-full h-full" allowTransparency={true} allowFullScreen />
+                  </div>
+                  <div className="relative w-full rounded-lg overflow-hidden pt-[125%]">
+                    <iframe title="Instagram post DKCHPA-T29V" src="https://www.instagram.com/p/DKCHPA-T29V/embed" className="absolute inset-0 w-full h-full" allowTransparency={true} allowFullScreen />
+                  </div>
+                  <div className="relative w-full rounded-lg overflow-hidden pt-[125%]">
+                    <iframe title="Instagram post DJI3pv6YTLfH" src="https://www.instagram.com/p/DJVvU13TIRS/embed" className="absolute inset-0 w-full h-full" allowTransparency={true} allowFullScreen />
+                  </div>
+                  <div className="relative w-full rounded-lg overflow-hidden pt-[125%]">
+                    <iframe title="Instagram post DI3pv6YTLfH" src="https://www.instagram.com/p/DI3pv6YTLfH/embed" className="absolute inset-0 w-full h-full" allowTransparency={true} allowFullScreen />
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </main>
